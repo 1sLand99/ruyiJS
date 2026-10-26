@@ -8,7 +8,7 @@
 原生的 Firefox JavaScript 引擎与网络栈，没有窗口、没有渲染器 ——<br>
 专为网页抓取、JS 逆向、数据采集与绕过人机验证而生。
 
-[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Release](https://img.shields.io/github/v/release/martinkeith700/ruyiJS?label=release&color=111111)](https://github.com/martinkeith700/ruyiJS/releases/latest) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE)<br>
+[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Release](https://img.shields.io/badge/release-v0.1.3-111111)](https://github.com/martinkeith700/ruyiJS/releases/latest) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE)<br>
 ![Windows](https://img.shields.io/badge/Windows%20x64-0078D4?logo=windows&logoColor=white) ![SpiderMonkey](https://img.shields.io/badge/SpiderMonkey-Firefox%20158-FF8A3D) ![Necko](https://img.shields.io/badge/Necko-HTTP%2F1.1%20·%202%20·%203-9B6BFF)
 
 **[安装](#-快速开始)** &nbsp;·&nbsp; **[功能](#-功能)** &nbsp;·&nbsp; **[攻克的验证系统](#-攻克的验证系统)** &nbsp;·&nbsp; **[示例](#-运行示例)** &nbsp;·&nbsp; **[联系](#-联系方式)** &nbsp;·&nbsp; [English](README.md) · **简体中文**
