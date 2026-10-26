@@ -1,0 +1,41 @@
+/build/
+/dist/
+/dist-*/
+/result/
+/wheelhouse/
+/python/*.egg-info/
+/python/ruyijs/_runtime/
+/out/
+/out-*/
+/ruyijs-windows-x64-*.zip
+/ruyijs-windows-x64-*.zip.sha256
+/out-share-*.zip
+/out-share-*.zip.sha256
+/artifacts/
+__pycache__/
+# Runtime components (embedded Python, wheels, derived Necko) ship with releases.
+/vendor/*
+# Keep the retained Necko native sources and records; the DLLs ship with releases.
+!/vendor/necko-native/
+/vendor/necko-native/**/*.dll
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+/.tmp*
+/tmp-*
+/tmp_*
+/_tmp*
+/*.log
+/*.moz_log
+/pid.txt
+/t1.err
+/t1.out
+
+# Local tooling and editors
+.claude/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

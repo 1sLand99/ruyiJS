@@ -1,0 +1,12 @@
+{
+  "version": "0.1.3",
+  "archive": "ruyijs-runtime-0.1.3-win-amd64.zip",
+  "sha256": "96b13f13aeb7b29ebd7af70dacffd5f24ecdfa100ca87d3d1ec191d1f38fbe4f",
+  "size": 41876199,
+  "unpacked_limit": 209715200,
+  "shell_sha256": "18f8adc6cc4350aea909a50a53a8d5d891271844c82c76d00f482a2b6d04034f",
+  "inventory_sha256": "4f5ca0dacb454dcbe18121f5affbecb2469ad4185a014be5c0669ddde50a664f",
+  "url": "",
+  "release_api": "https://gitee.com/api/v5/repos/losenine888/ruyiJS/releases/tags/v0.1.3",
+  "releases_api": "https://gitee.com/api/v5/repos/losenine888/ruyiJS/releases"
+}

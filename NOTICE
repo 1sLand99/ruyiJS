@@ -1,0 +1,31 @@
+ruyijs
+Copyright (c) 2026 the ruyijs contributors.
+
+This product is licensed under the Mozilla Public License, v. 2.0 (see LICENSE).
+
+Note (a courtesy request, not a license term): redistribution and commercial use are
+permitted by the MPL-2.0. As a courtesy, please obtain the author's permission before
+redistributing or commercializing ruyiJS — contact the author on WeChat (ID: 如意) or
+via https://github.com/aanderson1854/ruyijs.
+
+It is derived from and statically links code from Mozilla Firefox / SpiderMonkey
+(https://www.mozilla.org/firefox/), licensed under the Mozilla Public License 2.0.
+Upstream SpiderMonkey / Firefox sources are available from Mozilla; the full Mozilla
+license collection ships with the binary and portable releases (under licenses/).
+
+Third-party components are vendored at build time and ship with the binary and portable
+releases (each release collects every license text under licenses/). Each is under its
+own license:
+
+  - Mozilla SpiderMonkey / Necko / Firefox        MPL-2.0
+  - HarfBuzz                                       Old MIT
+  - encoding_rs (src/web_platform/encoding_rs/)    Apache-2.0 OR MIT
+  - Brotli                                         MIT
+  - CPython (embedded runtime)                     PSF-2.0
+  - Python packages used by Necko                  their respective licenses
+      (h2, hpack, hyperframe, cryptography, cffi, pycparser, certifi, idna,
+       charset-normalizer, publicsuffixlist, brotli, requests, urllib3, zstandard)
+  - Microsoft Visual C++ runtime                   Microsoft Visual Studio redistribution terms
+
+ruyijs is not affiliated with or endorsed by Mozilla. "Firefox" is a trademark of the
+Mozilla Foundation.

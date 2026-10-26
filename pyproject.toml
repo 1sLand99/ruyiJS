@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ruyijs"
+version = "0.1.3"
+description = "Firefox SpiderMonkey JavaScript contexts and native browser APIs for Python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MPL-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "ruyijs contributors"}]
+keywords = ["javascript", "spidermonkey", "firefox", "browser", "dom"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[tool.setuptools]
+packages = ["ruyijs"]
+package-dir = {"" = "python"}
+include-package-data = false
