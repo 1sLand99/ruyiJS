@@ -8,7 +8,7 @@
 The authentic Firefox JavaScript engine and networking stack, with no window and no renderer —<br>
 made for web scraping, JS reverse engineering, data collection, and getting past bot checks.
 
-[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Release](https://img.shields.io/github/v/release/aanderson1854/ruyijs?label=release&color=111111)](https://github.com/aanderson1854/ruyijs/releases/latest) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE)<br>
+[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Release](https://img.shields.io/github/v/release/martinkeith700/ruyiJS?label=release&color=111111)](https://github.com/martinkeith700/ruyiJS/releases/latest) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE)<br>
 ![Windows](https://img.shields.io/badge/Windows%20x64-0078D4?logo=windows&logoColor=white) ![SpiderMonkey](https://img.shields.io/badge/SpiderMonkey-Firefox%20158-FF8A3D) ![Necko](https://img.shields.io/badge/Necko-HTTP%2F1.1%20·%202%20·%203-9B6BFF)
 
 **[Install](#-quick-start)** &nbsp;·&nbsp; **[Features](#-features)** &nbsp;·&nbsp; **[Verification systems](#-verification-systems-it-defeats)** &nbsp;·&nbsp; **[Examples](#-examples)** &nbsp;·&nbsp; **[Contact](#-contact)** &nbsp;·&nbsp; **English** · [简体中文](README.zh-CN.md)
@@ -239,6 +239,6 @@ Questions, permission requests, commercial licensing, or just to talk shop — a
 
 Licensed under the **[Mozilla Public License 2.0](LICENSE)**. See [`NOTICE`](NOTICE) for third-party attributions.
 
-> 📌 As a courtesy: for **redistribution and commercial use, please obtain the author's permission** — add the author on WeChat (ID: **如意**) or open an issue on [GitHub](https://github.com/aanderson1854/ruyijs).
+> 📌 As a courtesy: for **redistribution and commercial use, please obtain the author's permission** — add the author on WeChat (ID: **如意**) or open an issue on [GitHub](https://github.com/martinkeith700/ruyiJS).
 
 If ruyiJS saved you from reimplementing a browser, a ⭐ helps others find it.
