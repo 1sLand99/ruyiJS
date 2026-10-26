@@ -5,6 +5,21 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-10-26
+
+### Fixed
+
+- `python -m ruyijs.examples <name>` failed with "示例文件不存在" from an installed
+  wheel: the example locator used a sentinel file (`turnstile/turnstile.py`) that is
+  not shipped, so it never recognized the installed layout and looked in the wrong
+  directory. It now uses `google/google_search.py`, which ships. Affected every
+  example when run from the installed package.
+
+### Removed
+
+- `datadome` and `turnstile` entries from the examples CLI registry; their files are
+  not distributed, so they could never run.
+
 ## [0.1.2] - 2026-10-22
 
 ### Added

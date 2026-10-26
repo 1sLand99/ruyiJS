@@ -17,14 +17,16 @@ EXAMPLES = {
     "shumei": ("数美/shumei.py", "数美"),
     "tianyu": ("腾讯天御/tianyu.py", "腾讯天御"),
     "creepjs": ("creepjs/creepjs.py", "CreepJS"),
-    "datadome": ("DataDome/solve.py", "DataDome 实网滑块"),
-    "turnstile": ("turnstile/turnstile.py", "ScrapingCourse Turnstile 登录闭环"),
 }
 
 
 def _root():
+    # Installed layout: examples sit next to this file (ruyijs/examples/<name>).
+    # Source tree: this file is python/ruyijs/examples/__main__.py and the
+    # examples live at <repo>/examples. google ships in the package but is not
+    # copied into the source-tree python/ruyijs/examples, so it tells them apart.
     local = Path(__file__).resolve().parent
-    if (local / "turnstile/turnstile.py").is_file():
+    if (local / "google/google_search.py").is_file():
         return local
     return Path(__file__).resolve().parents[3] / "examples"
 
