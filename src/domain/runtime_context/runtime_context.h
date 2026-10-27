@@ -38,7 +38,7 @@ public:
     struct Config {
         ContextMode mode = ContextMode::Prod;
         TimeMode time_mode = TimeMode::Logical;
-        std::string js_api_name = "__iv8__";  // JS-side tool object mount name
+        std::string js_api_name = "__ruyijs__";  // JS-side tool object mount name
     };
 
     explicit RuntimeContextAggregate(ContextId id, Config config = {})
