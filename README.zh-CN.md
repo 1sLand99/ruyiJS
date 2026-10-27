@@ -12,7 +12,7 @@
 
 <sub>赞助商</sub>
 
-<a href="https://www.fastaitoken.com"><img src="assets/sponsor-fastaitoken.png" height="36" alt="FastAIToken"></a>
+<a href="https://www.fastaitoken.com"><img src="assets/sponsor-fastaitoken.png" height="48" alt="FastAIToken"></a>
 
 **[安装](#-安装)** &nbsp;·&nbsp; **[功能](#-功能)** &nbsp;·&nbsp; **[攻克的验证系统](#-攻克的验证系统)** &nbsp;·&nbsp; **[示例](#-运行示例)** &nbsp;·&nbsp; **[FAQ](#-常见问题)** &nbsp;·&nbsp; **[联系](#-联系方式)** &nbsp;·&nbsp; **[LinuxDO](https://linux.do/t/topic/3078486)** &nbsp;·&nbsp; [English](README.md) · **简体中文**
 
