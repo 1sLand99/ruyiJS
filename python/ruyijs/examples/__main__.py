@@ -17,6 +17,8 @@ EXAMPLES = {
     "shumei": ("数美/shumei.py", "数美"),
     "tianyu": ("腾讯天御/tianyu.py", "腾讯天御"),
     "creepjs": ("creepjs/creepjs.py", "CreepJS"),
+    "akamai": ("akamai/akamai.py", "Akamai Bot Manager 3.x"),
+    "ali234": ("阿里234/taobao_bxua.py", "阿里 234 / 淘宝 bx-ua"),
 }
 
 

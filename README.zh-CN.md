@@ -8,7 +8,7 @@
 原生的 Firefox JavaScript 引擎与网络栈，没有窗口、没有渲染器 ——<br>
 专为网页抓取、JS 逆向、数据采集与绕过人机验证而生。
 
-[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Release](https://img.shields.io/badge/release-v0.1.5-111111)](https://github.com/martinkeith700/ruyiJS/releases/latest) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE) [![LinuxDO](https://img.shields.io/badge/LinuxDO-社区-FFB003?logo=discourse&logoColor=white)](https://linux.do/t/topic/3078486)<br>
+[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Release](https://img.shields.io/badge/release-v0.1.6-111111)](https://github.com/martinkeith700/ruyiJS/releases/latest) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE) [![LinuxDO](https://img.shields.io/badge/LinuxDO-社区-FFB003?logo=discourse&logoColor=white)](https://linux.do/t/topic/3078486)<br>
 ![Windows](https://img.shields.io/badge/Windows%20x64-0078D4?logo=windows&logoColor=white) ![SpiderMonkey](https://img.shields.io/badge/SpiderMonkey-Firefox%20158-FF8A3D) ![Necko](https://img.shields.io/badge/Necko-HTTP%2F1.1%20·%202%20·%203-9B6BFF)
 
 **[安装](#-快速开始)** &nbsp;·&nbsp; **[功能](#-功能)** &nbsp;·&nbsp; **[攻克的验证系统](#-攻克的验证系统)** &nbsp;·&nbsp; **[示例](#-运行示例)** &nbsp;·&nbsp; **[联系](#-联系方式)** &nbsp;·&nbsp; **[LinuxDO](https://linux.do/t/topic/3078486)** &nbsp;·&nbsp; [English](README.md) · **简体中文**
@@ -179,6 +179,8 @@ with Context(timeout=10) as context:
 | **数美 Shumei** | 滑块 | `shumei` |
 | **网易易盾 NetEase Yidun** | 智能验证 | `yidun` |
 | **Arkose Labs + iovation** | 企业风控 / 设备指纹 | `expedia-taap` |
+| **Akamai Bot Manager 3.x** | sensor_data + sbsd 挑战 | `akamai` |
+| **阿里 234 / fireyejs** | JSVMP 字节码 VM / bx-ua token | `ali234` |
 | **CreepJS** | 指纹审计 —— 全部项目通过 | `creepjs` |
 
 完整的生产级数据采集流程：**BOSS 直聘**、**今日头条**、**抖音**、**小红书**、**Google**、**Expedia TAAP**。
@@ -201,6 +203,8 @@ python -m ruyijs.examples geetest              # 极验一键通过
 python -m ruyijs.examples yidun                # 网易易盾
 python -m ruyijs.examples shumei               # 数美滑块
 python -m ruyijs.examples tianyu               # 腾讯天御
+python -m ruyijs.examples akamai              # Akamai Bot Manager 3.x
+python -m ruyijs.examples ali234              # 阿里 234 / 淘宝 bx-ua
 ```
 
 示例均支持 `--direct`（直连）和 `--proxy http://127.0.0.1:7890`，在名称后加 `--help` 查看全部参数，`--output result.json` 可保存结果。各示例目录内附 README。
