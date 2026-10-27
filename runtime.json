@@ -1,12 +1,12 @@
 {
-  "version": "0.1.3",
-  "archive": "ruyijs-runtime-0.1.3-win-amd64.zip",
-  "sha256": "96b13f13aeb7b29ebd7af70dacffd5f24ecdfa100ca87d3d1ec191d1f38fbe4f",
-  "size": 41876199,
+  "version": "0.1.5",
+  "archive": "ruyijs-runtime-0.1.5-win-amd64.zip",
+  "sha256": "3704ad8ae7164e478d39aca1180f09e3e94dabe568110bb59b1f9d4b938f97d6",
+  "size": 43228690,
   "unpacked_limit": 209715200,
-  "shell_sha256": "18f8adc6cc4350aea909a50a53a8d5d891271844c82c76d00f482a2b6d04034f",
-  "inventory_sha256": "4f5ca0dacb454dcbe18121f5affbecb2469ad4185a014be5c0669ddde50a664f",
+  "shell_sha256": "30581e7af9edee3b6531c4149ccbdd4d82325473e7ea04664e20f1ef7a4bcf4c",
+  "inventory_sha256": "e1bcbc51a166995b932eb8037cbfd041aadafe1f87df94713723e63776bad01e",
   "url": "",
-  "release_api": "https://gitee.com/api/v5/repos/losenine888/ruyiJS/releases/tags/v0.1.3",
+  "release_api": "https://gitee.com/api/v5/repos/losenine888/ruyiJS/releases/tags/v0.1.5",
   "releases_api": "https://gitee.com/api/v5/repos/losenine888/ruyiJS/releases"
 }

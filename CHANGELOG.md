@@ -5,6 +5,8 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.5] - 2026-10-27
+
 ### Fixed
 
 - Host-initiated `Context.navigate()` deadlocked under Wine: the navigation was
@@ -14,9 +16,14 @@ All notable changes to this project are documented here. The format follows
   synchronously on the call, the same way the host `load` action already does
   (which is why `load_page` was unaffected). In-page navigation (`location.href`,
   `location.assign`, reload) and form submission keep Firefox's async two-task
-  model, so the calling script still continues first. Reported in #1; requires a
-  rebuilt runtime to reach the published wheel. (`src/runtime/page_navigation.cpp`,
-  `src/runtime/page_load.*`)
+  model, so the calling script still continues first. Reported in #1.
+  (`src/runtime/page_navigation.cpp`, `src/runtime/page_load.*`)
+
+### Changed
+
+- Bundled runtime rebuilt with the navigation fix (`js.exe` SHA-256 `30581e7a…`)
+  and re-pinned in `runtime.json`; the embedded Python and other runtime
+  components are unchanged.
 
 ## [0.1.4] - 2026-10-26
 
