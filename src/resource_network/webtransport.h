@@ -79,6 +79,6 @@ bool TransportReject(JSContext*,JS::HandleObject,JS::HandleValue);
 inline TransportPhase TransportStatus(JSObject* value) {return TransportPhase(JS::GetReservedSlot(value,WTPhase).toInt32());}
 inline void SetTransportStatus(JSObject* value,TransportPhase phase) {JS::SetReservedSlot(value,WTPhase,JS::Int32Value(int(phase)));}
 template<class F> bool TransportGuard(JSContext* cx,F&& fn) {
-  try {return fn();}catch(const std::bad_alloc&) {JS_ReportOutOfMemory(cx);return false;}
+  return fn();
 }
 }
