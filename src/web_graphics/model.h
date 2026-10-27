@@ -60,7 +60,7 @@ struct GlValues {
   std::vector<std::string> supported_extensions;
   std::vector<std::string> supported_extensions2;
 };
-// Public iv8 defaults for the additional query surface. Numeric arrays retain
+// Public ruyijs defaults for the additional query surface. Numeric arrays retain
 // their GL result type; this table has no engine or JSON dependency. A
 // non-null `extension` names the WebGL extension that must be enabled through
 // getExtension before Firefox answers the pname (WebGLContextState.cpp

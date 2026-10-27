@@ -40,7 +40,7 @@ inline constexpr Field kNavigatorFields[] = {
   {"languages", ValueType::Strings, true}, {"hardwareConcurrency", ValueType::Integer, true},
   {"maxTouchPoints", ValueType::Integer}, {"cookieEnabled", ValueType::Boolean},
   {"webdriver", ValueType::Boolean},
-  // Firefox-only platform traits the imported ivv8 owner does not model; the
+  // Firefox-only platform traits the imported ruyijs owner does not model; the
   // values live in Model::Impl (model_internal.h) and are configured through
   // the same validated profile as the imported fields.
   {"oscpu", ValueType::String}, {"buildID", ValueType::String},

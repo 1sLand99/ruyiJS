@@ -18,7 +18,7 @@ using detail::ContextOf;
 using detail::NodeReceiver;
 
 // Input/output counts come from the node's kNodeDefs row; -1 (the base
-// AudioNode and the oscillator, which ivv8 builds outside the table) falls back
+// AudioNode and the oscillator, which ruyijs builds outside the table) falls back
 // to the kind.
 void CountsOf(JSObject* node, uint32_t* inputs, uint32_t* outputs) {
   const int32_t index = JS::GetReservedSlot(node, kNodeDefIndexSlot).toInt32();

@@ -30,7 +30,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent
 sys.dont_write_bytecode = True
 # Support running from source tree
-RUYIJS_ROOT = Path("D:/BaiduNetdiskDownload/ivv8/ivv8/ruyijs")
+RUYIJS_ROOT = ROOT.parents[1]
 if (RUYIJS_ROOT / "dist" / "js.exe").is_file():
     sys.path.insert(0, str(RUYIJS_ROOT / "python"))
 try:

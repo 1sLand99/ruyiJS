@@ -6,7 +6,7 @@
 
 namespace ruyijs::web_rtc {
 
-// Plain mirrors of the imported ivv8 RTC owner. model.cpp is the only unit
+// Plain mirrors of the imported ruyijs RTC owner. model.cpp is the only unit
 // that sees domain/rtc/rtc_session.h; every other web_rtc unit speaks these
 // types and the noexcept facade below.
 struct DescriptionSpec {

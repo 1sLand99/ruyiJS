@@ -14,7 +14,7 @@ struct MethodDef {
   int32_t slot;
 };
 
-// The ordered BaseAudioContext factory surface from ivv8 audio_bindings.cpp.
+// The ordered BaseAudioContext factory surface from ruyijs audio_bindings.cpp.
 // The slot is the kNodeDefs index or a kSlot* constant for non-node results.
 constexpr MethodDef kFactories[] = {
     {"createOscillator", kSlotOscillator},

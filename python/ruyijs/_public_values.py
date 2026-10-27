@@ -1,4 +1,4 @@
-"""iv8-style values encoded as DTOs on the existing typed protocol."""
+"""ruyijs-style values encoded as DTOs on the existing typed protocol."""
 
 from ._jsvalue import JSObject, JSFunction
 from ._values import encode

@@ -131,7 +131,7 @@ class Element : public Node {
   }
   const std::vector<Attribute>& attributes16() const noexcept { return attributes_; }
   size_t attribute_count() const noexcept { return attributes_.size(); }
-  // Public iv8 control state is independent of attributes and resets on clone.
+  // Public ruyijs control state is independent of attributes and resets on clone.
   bool option_selected() const {
     return selected_override_.value_or(get_attribute16(u"selected").has_value());
   }

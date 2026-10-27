@@ -33,7 +33,7 @@ bool DocumentPictureConstructor(JSContext* cx, unsigned n, JS::Value* vp) {
   JS::RootedValue ignored(cx);
   for (const char* name : {"bubbles", "cancelable", "composed", "window"})
     if (!PublicEventRead(cx, dict, name, &ignored)) return false;
-  // Public iv8 fails here even for a real Window. User supplements retain this
+  // Public ruyijs fails here even for a real Window. User supplements retain this
   // prototype and construct through Event, which remains the only event factory.
   return Error(cx, "TypeError", "DocumentPictureInPictureEvent native construction failed");
 }

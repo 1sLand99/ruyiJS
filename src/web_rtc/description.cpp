@@ -17,7 +17,7 @@ JSObject* NewDescription(State& state, const DescriptionSpec& spec, JS::HandleOb
   return description.get();
 }
 
-// RTCIceCandidate mirrors the ivv8 shape: candidate defaults to "", the other
+// RTCIceCandidate mirrors the ruyijs shape: candidate defaults to "", the other
 // three members default to null.
 JSObject* NewCandidate(State& state, JS::HandleValue dictionary, JS::HandleObject proto) {
   JSContext* cx = state.cx;

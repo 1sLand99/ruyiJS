@@ -7,7 +7,7 @@ inline DomString head_ascii_lower(DomStringView text) {
   for (auto& c : out) if (c >= u'A' && c <= u'Z') c += u'a' - u'A';
   return out;
 }
-// Public iv8's head element reflections; attributes remain the only state.
+// Public ruyijs's head element reflections; attributes remain the only state.
 inline std::optional<DomString> head_attribute(const Element& e, DomStringView name) {
   auto text = e.get_attribute16(name).value_or(u"");
   if (!e.tag_name().is_script()) {

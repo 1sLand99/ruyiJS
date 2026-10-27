@@ -1,4 +1,4 @@
-// The remaining public iv8 methods. Drawing has no rasterizer (D35).
+// The remaining public ruyijs methods. Drawing has no rasterizer (D35).
 #include "web_canvas/internal.h"
 #include "document_model/state.h"
 #include "web_media/image_codec.h"

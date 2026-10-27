@@ -64,7 +64,7 @@ bool FireRuntimeEvent(State& state, JS::HandleObject target, const char* interfa
   }
   if (created) *created = object;
   // Native form submission carries the original FormData, unlike the legacy
-  // public iv8 placeholder constructor. Both getters read this same traced slot.
+  // public ruyijs placeholder constructor. Both getters read this same traced slot.
   if (iface == Iface::FormDataPayload) {
     JS::RootedValue data(cx);
     if (!JS_GetProperty(cx, init, "formData", &data)) return false;

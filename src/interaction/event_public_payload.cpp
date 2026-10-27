@@ -35,7 +35,7 @@ bool Number(JSContext* cx, JS::HandleObject dict, JS::HandleObject object,
             const char* name, uint32_t slot) {
   JS::RootedValue value(cx);
   if (!PublicEventRead(cx, dict, name, &value)) return false;
-  // Public iv8 accepts only numbers here, without ToNumber coercion.
+  // Public ruyijs accepts only numbers here, without ToNumber coercion.
   JS::SetReservedSlot(object, slot, value.isNumber() ? value.get() : JS::NullValue());
   return true;
 }

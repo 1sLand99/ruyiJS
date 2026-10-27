@@ -1,4 +1,4 @@
-// Public iv8's decode placeholder examines the original src content attribute.
+// Public ruyijs's decode placeholder examines the original src content attribute.
 #include "document_model/html_control.h"
 #include "js/ErrorReport.h"
 #include "js/Exception.h"

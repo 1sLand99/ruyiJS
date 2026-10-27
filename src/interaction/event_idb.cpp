@@ -34,7 +34,7 @@ bool Version(JSContext* cx, JS::HandleObject dict, JS::HandleObject object,
     JS_ClearPendingException(cx);
     number = 0;
   }
-  // Public iv8 uses a signed-64 conversion before the unsigned projection.
+  // Public ruyijs uses a signed-64 conversion before the unsigned projection.
   // Check its sentinel boundary explicitly instead of casting out-of-range doubles.
   double result = 0;
   if (!std::isnan(number)) {

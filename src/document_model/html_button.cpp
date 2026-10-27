@@ -16,7 +16,7 @@ const Property kProperties[] = {
   {"willValidate",u"",DisabledValidation,false},{"validity",u"",Validity,false},
   {"validationMessage",u"",Empty,false},{"labels",u"",Null,false}
 };
-// Public iv8's button conversion catches a thrown string coercion and writes
+// Public ruyijs's button conversion catches a thrown string coercion and writes
 // an empty value. Keep that handling local; do not consume OOM or interrupts.
 bool ButtonString(JSContext* cx, JS::HandleValue value, DomString* text) {
   if (String(cx, value, text)) return true;

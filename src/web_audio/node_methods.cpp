@@ -6,7 +6,7 @@
 #include "js/experimental/TypedData.h"
 
 namespace ruyijs::web_audio {
-// Slots 0..3 are the public iv8 analyser's silence output, 4/5 filter no-ops,
+// Slots 0..3 are the public ruyijs analyser's silence output, 4/5 filter no-ops,
 // 6/7 panner coordinates and 8 oscillator periodic-wave entry.
 bool NodeExtraMethod(JSContext* cx,unsigned argc,JS::Value* vp) {
   auto args=JS::CallArgsFromVp(argc,vp);
@@ -42,7 +42,7 @@ bool NodeExtraMethod(JSContext* cx,unsigned argc,JS::Value* vp) {
       if(!s->model.set_param_value(id,value)) return false;
     }
   }
-  // Public iv8's filter response and setPeriodicWave leave state unchanged.
+  // Public ruyijs's filter response and setPeriodicWave leave state unchanged.
   args.rval().setUndefined();return true;
 }
 }

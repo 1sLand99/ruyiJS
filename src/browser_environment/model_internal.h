@@ -12,7 +12,7 @@ struct Model::Impl {
   ruyijs::domain::browser_environment::TouchEventsOverride touch_override =
       ruyijs::domain::browser_environment::TouchEventsOverride::Auto;
   // The Firefox-only navigator traits (kNavigatorFields 15..20). The imported
-  // ivv8 NavigatorInfo has no such fields, so ruyijs keeps them beside the
+  // ruyijs NavigatorInfo has no such fields, so ruyijs keeps them beside the
   // aggregate instead of editing the byte-identical domain import. Defaults
   // match profiles/firefox-environment.json; the baseline profile always
   // overwrites them before any page can read them.

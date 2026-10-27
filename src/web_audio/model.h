@@ -4,7 +4,7 @@
 
 namespace ruyijs::web_audio {
 
-// One AudioParam definition, mirrored from the imported ivv8 domain type.
+// One AudioParam definition, mirrored from the imported ruyijs domain type.
 // model.cpp is the only unit that sees the domain header; every other
 // web_audio unit speaks this plain struct.
 struct ParamSpec {

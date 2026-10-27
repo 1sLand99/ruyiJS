@@ -15,7 +15,7 @@ struct Info { std::u16string name; uint64_t version = 0; };
 enum class Code { Ok, Version, Blocked, Quota, Memory };
 enum class WriteCode { Ok, Quota, Constraint, Exists };
 struct Result { Code code = Code::Ok; uint64_t oldVersion = 0, version = 0; uint32_t connection = 0; };
-// Product-authored domain, not an imported ivv8 file. No runtime dependency.
+// Product-authored domain, not an imported ruyijs file. No runtime dependency.
 class Catalog {
  public:
   Result Inspect(const Key& key, uint64_t version, bool remove) const {

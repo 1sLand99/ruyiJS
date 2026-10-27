@@ -9,7 +9,7 @@ _TYPED = object()
 class EvaluationControl:
     def eval(self, code, filename="<eval>", line=-1, col=-1, to_py=_TYPED,
              devtools=True, *, name=_TYPED):
-        """Evaluate code; explicit to_py selects iv8's public value conversion.
+        """Evaluate code; explicit to_py selects ruyijs's public value conversion.
 
         Without to_py the original typed snapshot protocol is preserved.
         to_py=False keeps DOM/class/function references; True labels top-level

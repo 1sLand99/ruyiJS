@@ -13,7 +13,7 @@ bool RtcEventUnsignedShort(JSContext* cx, JS::HandleValue value, uint16_t* out) 
     return true;
   }
   if (!std::isfinite(number)) return true;
-  // D121: public iv8's negative object integers vary with V8's internal number
+  // D121: public ruyijs's negative object integers vary with V8's internal number
   // representation. Keep a deterministic fallback; direct numeric inputs wrap.
   if (number < 0 && (value.isString() || (value.isObject() && std::trunc(number) == number)))
     return true;

@@ -2,7 +2,7 @@
 #include "domain/document_model/dom_string.h"
 
 namespace ruyijs::domain::document_model {
-// The public iv8 setter accepts these exact tokens; direct attributes stay raw.
+// The public ruyijs setter accepts these exact tokens; direct attributes stay raw.
 inline bool select_autocomplete(DomStringView value) {
   static constexpr DomStringView tokens[] = {
     u"",u"on",u"off",u"name",u"honorific-prefix",u"given-name",u"additional-name",u"family-name",

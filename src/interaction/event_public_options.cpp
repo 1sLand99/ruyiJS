@@ -1,4 +1,4 @@
-// Public iv8 construction policy for the Firefox-supported event additions.
+// Public ruyijs construction policy for the Firefox-supported event additions.
 // Existing event constructors continue to use ReadEventBase and Text.
 #include "interaction/internal.h"
 #include "js/Conversions.h"

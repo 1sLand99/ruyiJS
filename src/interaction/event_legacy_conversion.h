@@ -4,7 +4,7 @@
 
 namespace ruyijs::interaction {
 // Per-invocation roots only. Convert every argument before changing the event;
-// public iv8 retains the last ordinary conversion exception, then throws after
+// public ruyijs retains the last ordinary conversion exception, then throws after
 // writing converted/default values. Engine OOM/termination stops immediately.
 class LegacyConversion {
  public:

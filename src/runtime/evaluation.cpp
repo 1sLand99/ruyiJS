@@ -143,7 +143,7 @@ bool Evaluate(JSContext* cx, JS::HandleObject page, JS::HandleString code,
     JS::RootedScript introducer(cx);
     if (introduction) options.setIntroductionInfoToCaller(cx, introduction, &introducer);
     options.setFileAndLine(filename, 1);
-    // Public iv8 applies offsets only when BOTH values are nonnegative.
+    // Public ruyijs applies offsets only when BOTH values are nonnegative.
     if (evalOptions.line() >= 0 && evalOptions.col() >= 0) {
       options.setFileAndLine(filename, uint32_t(evalOptions.line()) + 1);
       options.setColumn(JS::ColumnNumberOneOrigin(uint32_t(evalOptions.col()) + 1));

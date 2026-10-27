@@ -264,7 +264,7 @@ bool Error(JSContext* cx, const char* name, const char* message);
 bool Text(JSContext* cx, JS::HandleValue value, JS::MutableHandleString text, std::string* key);
 bool Option(JSContext* cx, JS::HandleObject object, const char* name, bool* value);
 bool InstallEvent(State& state);
-// Event instances expose isTrusted as an own enumerable accessor (iv8 parity and
+// Event instances expose isTrusted as an own enumerable accessor (ruyijs parity and
 // monitor visibility), installed by one shared helper for every constructor.
 bool InstallTrusted(State& state, JS::HandleObject object);
 enum class Exposure : uint8_t { Window, Worker, ServiceWorker, DedicatedWorker };
