@@ -5,6 +5,19 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- Host-initiated `Context.navigate()` deadlocked under Wine: the navigation was
+  queued as SpiderMonkey tasks (`DeliverNavigation` / `DeliverCommit`) that are
+  never delivered between host RPC calls under Wine, so `advance` waited on the
+  pending task until the RPC timeout. The host `navigate` action now commits
+  synchronously on the call, the same way the host `load` action already does
+  (which is why `load_page` was unaffected). In-page navigation (`location.href`,
+  `location.assign`, reload) and form submission keep Firefox's async two-task
+  model, so the calling script still continues first. Reported in #1; requires a
+  rebuilt runtime to reach the published wheel. (`src/runtime/page_navigation.cpp`,
+  `src/runtime/page_load.*`)
+
 ## [0.1.4] - 2026-10-26
 
 ### Fixed

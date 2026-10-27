@@ -63,7 +63,18 @@ bool PageLoad::BeforeUnload() {
   return active.interaction->FireBeforeUnload(window);
 }
 bool PageLoad::BrowserNavigation(const std::string& url) {
-  return RequestNavigation(url, false, false, true);
+  // The host `page` "navigate" action commits on this call, the same way the
+  // host `load` does: a browser-started top-level navigation has no page script
+  // underneath it that must keep running, so it need not be queued as a task.
+  // Running it inline also keeps it working where posted engine tasks are not
+  // delivered between host RPC calls, as in the standalone shell under Wine
+  // (issue #1). In-page navigation (RequestNavigation, below) keeps Firefox's
+  // async two-task model so the calling script continues first.
+  const uint64_t ticket = ++ticket_;
+  if (!BeforeUnload()) return false;
+  // A beforeunload listener may have started its own navigation; it wins.
+  if (Started(ticket)) return true;
+  return Navigate(url, false, "GET", "", "", true, true);
 }
 bool PageLoad::RequestNavigation(const std::string& url, bool replace, bool reload, bool browser) {
   if (reload && top_.Active().browserInitiated) browser = true;
@@ -94,7 +105,7 @@ bool PageLoad::DeliverNavigation(JSContext* cx, unsigned argc, JS::Value* vp) {
 }
 bool PageLoad::Navigate(const std::string& url, bool replace, const std::string& method,
                         const std::string& requestBody, const std::string& contentType,
-                        bool browserInitiated) {
+                        bool browserInitiated, bool commitInline) {
   BrowsingContext& previous = top_.Active();
   JS::RootedObject before(cx_, previous.page);
   JSAutoRealm realm(cx_, before);
@@ -127,6 +138,10 @@ bool PageLoad::Navigate(const std::string& url, bool replace, const std::string&
   pending->response_start = pending->response_end;
   pending->redirects = uint16_t(pending->http.redirected ? 1 : 0);
   pending_ = std::move(pending);
+  // The host `navigate` action commits here, on the calling stack; an in-page
+  // navigation posts the commit as a later task so the current document keeps
+  // running meanwhile, as Firefox does.
+  if (commitInline) return Commit(pending_->ticket);
   JS::RootedObject task(cx_, JS_NewObjectWithGivenProto(cx_, &kNavigationTask, nullptr));
   if (!task) return false;
   JS::SetReservedSlot(task, Loader, JS::PrivateValue(this));

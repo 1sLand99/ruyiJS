@@ -67,10 +67,12 @@ class PageLoad final {
   // current document's work that came due meanwhile runs first. The commit
   // unloads that document, builds the next document's realm, commits the
   // response URL and one session-history entry and runs the same parse/
-  // execute/lifecycle path as `load`.
+  // execute/lifecycle path as `load`. With |commitInline| the commit runs on
+  // this call instead of a later task; only the host `navigate` action uses it
+  // (BrowserNavigation), where there is no page script to keep running.
   bool Navigate(const std::string& url, bool replace, const std::string& method = "GET",
                 const std::string& body = "", const std::string& contentType = "",
-                bool browserInitiated = false);
+                bool browserInitiated = false, bool commitInline = false);
   // Fires the trusted beforeunload a starting navigation of the active
   // top-level document fires (listener errors are reported, not thrown).
   bool BeforeUnload();

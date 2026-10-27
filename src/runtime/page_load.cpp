@@ -43,7 +43,7 @@ bool PageLoad::Request(JS::HandleObject request, JS::MutableHandleValue result) 
     if (!JS_HasOwnProperty(cx_, request, "replay_async_scripts", &hasOrder)) return false;
     if (hasOrder) return resource_wire::Error(cx_, "recorded script order requires page load");
     // A browser-started navigation of the top-level document (address bar):
-    // it runs on the event loop like any other; the host advances it.
+    // it commits on this call, the same way the host `load` action does.
     if (!StringProperty(cx_, request, "url", &url)) return false;
     if (!BrowserNavigation(url)) return false;
     JS::RootedObject summary(cx_, JS_NewPlainObject(cx_));
