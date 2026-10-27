@@ -1,5 +1,6 @@
 #include "execution_scheduling/state.h"
 #include <algorithm>
+#include <chrono>
 #include <cmath>
 
 namespace ruyijs::execution_scheduling {
@@ -20,9 +21,13 @@ bool State::AwaitExternal(double until, double step) {
 void Realm::SetExternalWork(const ExternalWork& work) { state_->external = work; }
 bool Realm::RunExternalTask() {
   auto& s = *state_;
+  // Cap at 10 seconds: on platforms where the async transport's completion
+  // signal never arrives (Wine), this prevents an infinite spin.
+  const auto deadline = std::chrono::steady_clock::now() + std::chrono::seconds(10);
   for (;;) {
     if (s.RunExternal()) return true;
     if (!s.ExternalPending()) return false;
+    if (std::chrono::steady_clock::now() > deadline) return false;
     s.ExternalReady(1000);
   }
 }

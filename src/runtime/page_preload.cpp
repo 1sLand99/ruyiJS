@@ -12,6 +12,7 @@
 #include "execution_scheduling/realm.h"
 #include "js/CharacterEncoding.h"
 #include "js/Realm.h"
+#include <chrono>
 #include <cstdio>
 
 namespace ruyijs {
@@ -128,7 +129,13 @@ bool PageLoad::TakePreload(const std::string& key, resource_network::HttpResult*
   // A completion may belong to another script or an image. Keep consuming
   // external work until this response arrives; treating an unrelated
   // completion as a miss would issue a second GET for the in-flight script.
-  while (!slot->done && scheduling_.RunExternalTask()) {}
+  // Cap the wait at 8 seconds: on platforms where the async transport's
+  // completion signal never fires (Wine), the miss lets Source() fall back
+  // to its synchronous PerformHttp path instead of blocking forever.
+  const auto deadline = std::chrono::steady_clock::now() + std::chrono::seconds(8);
+  while (!slot->done && scheduling_.RunExternalTask()) {
+    if (std::chrono::steady_clock::now() > deadline) break;
+  }
   if (!slot->done) return false;
   if (!slot->ok) {
     if (failed) *failed = true;
