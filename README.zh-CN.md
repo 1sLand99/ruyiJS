@@ -8,10 +8,9 @@
 原生的 Firefox JavaScript 引擎与网络栈，没有窗口、没有渲染器 ——<br>
 专为网页抓取、JS 逆向、数据采集与绕过人机验证而生。
 
-[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Release](https://img.shields.io/badge/release-v0.1.6-111111)](https://github.com/martinkeith700/ruyiJS/releases/latest) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE) [![LinuxDO](https://img.shields.io/badge/LinuxDO-社区-FFB003?logo=discourse&logoColor=white)](https://linux.do/t/topic/3078486)<br>
-![Windows](https://img.shields.io/badge/Windows%20x64-0078D4?logo=windows&logoColor=white) ![SpiderMonkey](https://img.shields.io/badge/SpiderMonkey-Firefox%20158-FF8A3D) ![Necko](https://img.shields.io/badge/Necko-HTTP%2F1.1%20·%202%20·%203-9B6BFF)
+[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE) [![Windows](https://img.shields.io/badge/Windows%20x64-0078D4?logo=windows&logoColor=white)](https://pypi.org/project/ruyijs/) [![LinuxDO](https://img.shields.io/badge/LinuxDO-社区-FFB003?logo=discourse&logoColor=white)](https://linux.do/t/topic/3078486)
 
-**[安装](#-快速开始)** &nbsp;·&nbsp; **[功能](#-功能)** &nbsp;·&nbsp; **[攻克的验证系统](#-攻克的验证系统)** &nbsp;·&nbsp; **[示例](#-运行示例)** &nbsp;·&nbsp; **[联系](#-联系方式)** &nbsp;·&nbsp; **[LinuxDO](https://linux.do/t/topic/3078486)** &nbsp;·&nbsp; [English](README.md) · **简体中文**
+**[安装](#-安装)** &nbsp;·&nbsp; **[功能](#-功能)** &nbsp;·&nbsp; **[攻克的验证系统](#-攻克的验证系统)** &nbsp;·&nbsp; **[示例](#-运行示例)** &nbsp;·&nbsp; **[FAQ](#-常见问题)** &nbsp;·&nbsp; **[联系](#-联系方式)** &nbsp;·&nbsp; **[LinuxDO](https://linux.do/t/topic/3078486)** &nbsp;·&nbsp; [English](README.md) · **简体中文**
 
 <br>
 
@@ -37,17 +36,30 @@ Headless Chrome 和 Playwright 给你的是一整个浏览器：一个负责 GPU
 
 运行于 **Windows x64**，需要 **Python 3.10+**（已在 Python 3.14 下验证）。wheel 内置锁定版原生运行时，无需再下载任何东西。
 
-## 🚀 快速开始
-
-**1 · 安装。**
+## 📦 安装
 
 ```sh
 python -m pip install ruyijs
 ```
 
-<sub>wheel 内置 SHA256 锁定的 SpiderMonkey + Necko 运行时；安装后本地脚本可离线运行，无需下载浏览器。</sub>
+**系统要求：** Windows x64（64 位）+ Python 3.10+，已在 Python 3.10 – 3.14 下验证。
 
-**2 · 打开上下文，执行 JavaScript。** 同一上下文内，变量和函数在多次 `eval` 之间保留。
+wheel 内置 SHA256 锁定的 SpiderMonkey + Necko 运行时（约 42 MB），安装后即可离线运行，无需下载浏览器，无外部依赖。
+
+升级：
+```sh
+python -m pip install --upgrade ruyijs
+```
+
+验证安装：
+```python
+import ruyijs
+print(ruyijs.__version__)   # 0.1.6
+```
+
+## 🚀 快速开始
+
+**1 · 打开上下文，执行 JavaScript。** 同一上下文内，变量和函数在多次 `eval` 之间保留。
 
 ```python
 from ruyijs import Context
@@ -225,6 +237,62 @@ python -m ruyijs.examples ali234              # 阿里 234 / 淘宝 bx-ua
 ruyiJS 提供 **Windows x64** 上的 JavaScript 执行及广泛的 Web API 环境，**不含浏览器窗口，也没有完整的页面布局与渲染** —— 它是面向自动化、分析与研究的工具。请在遵守目标站点服务条款与适用法律的前提下使用。
 
 **相关项目：** [**ruyiHttp**](https://gitee.com/losenine888/ruyiHttp) —— 基于 Firefox 原生网络组件的 Requests 风格 Python 请求库。
+
+## ❓ 常见问题
+
+<details>
+<summary><b>支持哪些 Python 版本？</b></summary>
+
+Windows x64（64 位）上的 Python 3.10 及以上版本，已测试至 Python 3.14。
+</details>
+
+<details>
+<summary><b>支持 macOS 或 Linux 吗？</b></summary>
+
+暂不支持，目前仅限 Windows x64。跨平台支持在计划中。
+</details>
+
+<details>
+<summary><b>需要下载浏览器吗？</b></summary>
+
+不需要。wheel 内置了锁定版 SpiderMonkey + Necko 运行时，`pip install ruyijs` 后即可离线运行。
+</details>
+
+<details>
+<summary><b>Context 卡住无响应</b></summary>
+
+- 确保使用 `with` 语句（`with Context() as ctx:`），以正确清理进程。
+- 如果使用代理，请检查代理是否可达：`Context(proxy="http://127.0.0.1:7890")`。
+- 增大超时：`Context(timeout=60)`。
+- 在 Wine 上运行请升级至 ≥ 0.1.5，该版本修复了已知的 navigate 死锁（[issue #1](https://github.com/martinkeith700/ruyiJS/issues/1)）。
+</details>
+
+<details>
+<summary><b>JSError: 脚本报错</b></summary>
+
+站点的 JavaScript 抛出了异常。检查 `error.name`、`error.message` 和 `error.stack` 定位原因。如果页面依赖尚未实现的 API，堆栈中会指向缺失的调用。
+</details>
+
+<details>
+<summary><b>如何使用代理？</b></summary>
+
+```python
+with Context(proxy="http://127.0.0.1:7890") as ctx:
+    ctx.navigate("https://example.com/")
+```
+
+支持 HTTP、HTTPS、SOCKS5 代理，按上下文隔离。
+</details>
+
+<details>
+<summary><b>如何运行示例？</b></summary>
+
+```sh
+python -m ruyijs.examples              # 列出全部示例
+python -m ruyijs.examples google --query python
+python -m ruyijs.examples akamai --proxy http://127.0.0.1:7890
+```
+</details>
 
 ## 💬 联系方式
 

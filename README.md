@@ -8,10 +8,9 @@
 The authentic Firefox JavaScript engine and networking stack, with no window and no renderer —<br>
 made for web scraping, JS reverse engineering, data collection, and getting past bot checks.
 
-[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Release](https://img.shields.io/badge/release-v0.1.6-111111)](https://github.com/martinkeith700/ruyiJS/releases/latest) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE) [![LinuxDO](https://img.shields.io/badge/LinuxDO-community-FFB003?logo=discourse&logoColor=white)](https://linux.do/t/topic/3078486)<br>
-![Windows](https://img.shields.io/badge/Windows%20x64-0078D4?logo=windows&logoColor=white) ![SpiderMonkey](https://img.shields.io/badge/SpiderMonkey-Firefox%20158-FF8A3D) ![Necko](https://img.shields.io/badge/Necko-HTTP%2F1.1%20·%202%20·%203-9B6BFF)
+[![PyPI](https://img.shields.io/pypi/v/ruyijs?label=pypi&color=111111&logo=pypi&logoColor=white)](https://pypi.org/project/ruyijs/) [![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-111111?logo=python&logoColor=white)](https://pypi.org/project/ruyijs/) [![License](https://img.shields.io/badge/license-MPL--2.0-111111)](LICENSE) [![Windows](https://img.shields.io/badge/Windows%20x64-0078D4?logo=windows&logoColor=white)](https://pypi.org/project/ruyijs/) [![LinuxDO](https://img.shields.io/badge/LinuxDO-community-FFB003?logo=discourse&logoColor=white)](https://linux.do/t/topic/3078486)
 
-**[Install](#-quick-start)** &nbsp;·&nbsp; **[Features](#-features)** &nbsp;·&nbsp; **[Verification systems](#-verification-systems-it-defeats)** &nbsp;·&nbsp; **[Examples](#-examples)** &nbsp;·&nbsp; **[Contact](#-contact)** &nbsp;·&nbsp; **[LinuxDO](https://linux.do/t/topic/3078486)** &nbsp;·&nbsp; **English** · [简体中文](README.zh-CN.md)
+**[Install](#-installation)** &nbsp;·&nbsp; **[Features](#-features)** &nbsp;·&nbsp; **[Verification systems](#-verification-systems-it-defeats)** &nbsp;·&nbsp; **[Examples](#-examples)** &nbsp;·&nbsp; **[FAQ](#-faq--troubleshooting)** &nbsp;·&nbsp; **[Contact](#-contact)** &nbsp;·&nbsp; **[LinuxDO](https://linux.do/t/topic/3078486)** &nbsp;·&nbsp; **English** · [简体中文](README.zh-CN.md)
 
 <br>
 
@@ -37,17 +36,30 @@ If you scrape, reverse-engineer web JavaScript, or collect data behind a challen
 
 Runs on **Windows x64** with **Python 3.10+** (verified on Python 3.14). The wheel bundles the pinned native runtime, so there's nothing else to download.
 
-## 🚀 Quick start
-
-**1 · Install.**
+## 📦 Installation
 
 ```sh
 python -m pip install ruyijs
 ```
 
-<sub>The wheel ships the SHA256-pinned SpiderMonkey + Necko runtime; local scripts run offline right after install. No browser download.</sub>
+**Requirements:** Python 3.10+ on Windows x64 (64-bit). Verified on Python 3.10 – 3.14.
 
-**2 · Open a context and run JavaScript.** Variables and functions persist across `eval` calls within the same context.
+The wheel ships the SHA256-pinned SpiderMonkey + Necko runtime (~42 MB). Local scripts run offline right after install — no browser download, no external dependencies.
+
+To upgrade:
+```sh
+python -m pip install --upgrade ruyijs
+```
+
+To verify the installation:
+```python
+import ruyijs
+print(ruyijs.__version__)   # 0.1.6
+```
+
+## 🚀 Quick start
+
+**1 · Open a context and run JavaScript.** Variables and functions persist across `eval` calls within the same context.
 
 ```python
 from ruyijs import Context
@@ -225,6 +237,62 @@ Every example supports `--direct` (direct connection) and `--proxy http://127.0.
 ruyiJS provides JavaScript execution and a broad Web API environment on **Windows x64**. It has **no browser window and no full page layout or rendering** — it is a tool for automation, analysis, and research. Use it in compliance with the terms of service of any site you interact with and with applicable law.
 
 **Related:** [**ruyiHttp**](https://gitee.com/losenine888/ruyiHttp) — a Requests-style Python HTTP library built on Firefox's native networking components.
+
+## ❓ FAQ / Troubleshooting
+
+<details>
+<summary><b>What Python versions are supported?</b></summary>
+
+Python 3.10 and above on Windows x64 (64-bit). Tested up to Python 3.14.
+</details>
+
+<details>
+<summary><b>Does it work on macOS or Linux?</b></summary>
+
+Not yet — currently Windows x64 only. Cross-platform support is planned.
+</details>
+
+<details>
+<summary><b>Do I need to download a browser?</b></summary>
+
+No. The wheel bundles the pinned SpiderMonkey + Necko runtime. Everything works offline right after `pip install ruyijs`.
+</details>
+
+<details>
+<summary><b>Context hangs or doesn't respond</b></summary>
+
+- Make sure you use the `with` statement (`with Context() as ctx:`) so the process is cleaned up properly.
+- If using a proxy, verify it is reachable: `context = Context(proxy="http://127.0.0.1:7890")`.
+- Increase the timeout: `Context(timeout=60)`.
+- On Wine, upgrade to ≥ 0.1.5 which fixes a known navigate deadlock ([issue #1](https://github.com/martinkeith700/ruyiJS/issues/1)).
+</details>
+
+<details>
+<summary><b>JSError: script error</b></summary>
+
+The site's JavaScript threw an exception. Inspect `error.name`, `error.message`, and `error.stack` to locate the cause. If the page relies on APIs not yet implemented, the stack trace will point to the missing call.
+</details>
+
+<details>
+<summary><b>How do I use a proxy?</b></summary>
+
+```python
+with Context(proxy="http://127.0.0.1:7890") as ctx:
+    ctx.navigate("https://example.com/")
+```
+
+HTTP, HTTPS, and SOCKS5 proxies are supported per-context.
+</details>
+
+<details>
+<summary><b>How do I run examples?</b></summary>
+
+```sh
+python -m ruyijs.examples              # list all examples
+python -m ruyijs.examples google --query python
+python -m ruyijs.examples akamai --proxy http://127.0.0.1:7890
+```
+</details>
 
 ## 💬 Contact
 
