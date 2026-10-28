@@ -13,12 +13,33 @@
 /out-share-*.zip.sha256
 /artifacts/
 /tests/
-/tools/
+# Only the native build and wheel tools are public; audit/probe tools stay local.
+/tools/*
+!/tools/README.md
+!/tools/generated/
+!/tools/binding_order.py
+!/tools/build.py
+!/tools/client.py
+!/tools/compression_native.py
+!/tools/donor.py
+!/tools/generate.py
+!/tools/geometry_fonts.py
+!/tools/image_native.py
+!/tools/native.py
+!/tools/product_sources.py
+!/tools/provenance.py
+!/tools/sanitizer_data.py
+!/tools/urlpattern_native.py
+!/tools/wheel_runtime.py
 __pycache__/
 # Runtime components (embedded Python, wheels, derived Necko) ship with releases.
 /vendor/*
 # Keep the retained Necko native sources and records; the DLLs ship with releases.
 !/vendor/necko-native/
+# Third-party native sources compiled into js.exe (tools/build.py).
+!/vendor/compression-native/
+!/vendor/image-native/
+!/vendor/urlpattern-native/
 /vendor/necko-native/**/*.dll
 *.py[cod]
 .pytest_cache/

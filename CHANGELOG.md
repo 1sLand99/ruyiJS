@@ -5,6 +5,45 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.7] - 2026-10-28
+
+### Fixed
+
+- External scripts, stylesheets and preloads hung until the RPC timeout under
+  Wine (#1). Wine loaded its builtin `msvcp140.dll` instead of the MSVC one
+  shipped beside `js.exe`; its `condition_variable` waits never woke for
+  completions pushed by the background transport threads. Under Wine,
+  `Context` now sets the per-program override
+  `HKCU\Software\Wine\AppDefaults\js.exe\DllOverrides` to
+  `msvcp140=native,builtin` (an existing value is kept; native Windows is
+  untouched). The 8 s / 10 s caps added in d33062f are reverted.
+  (`python/ruyijs/_context.py`)
+
+### Added
+
+- The native build tools (`tools/build.py` and its modules), the third-party
+  native sources compiled into `js.exe` (`vendor/compression-native`,
+  `vendor/image-native`, `vendor/urlpattern-native`) and the environment
+  baseline `profiles/firefox-environment.json` are public again (#3). Local
+  paths are no longer hard-coded; pass `--donor-obj` etc. or the matching
+  `RUYIJS_*` environment variables. Without a Firefox browser build, the
+  recorded `tools/generated/` headers stand in for its font preferences and
+  WebIDL member order, so a SpiderMonkey build of `FIREFOX_158_0_RELEASE` is
+  enough (see `tools/README.md`).
+- The page's `ruyijs` helper object (`createHostFunction`,
+  `createHostCollection`, ...) is defined in `src/runtime/host_helpers.cpp` when
+  the SpiderMonkey donor has no call tracing, so `src/` builds against official
+  Firefox sources; a donor with tracing keeps its own implementation.
+- The prebuilt runtime is attached to the GitHub release
+  (`ruyijs-runtime-0.1.7-win-amd64.zip`), and `runtime.json` downloads it from
+  there.
+
+### Changed
+
+- Bundled runtime rebuilt (`js.exe` SHA-256 `766e3742…`); build-machine paths
+  are no longer embedded in `js.exe`, `necko_quic.dll` or the runtime
+  manifests.
+
 ## [0.1.5] - 2026-10-27
 
 ### Fixed

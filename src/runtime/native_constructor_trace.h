@@ -1,7 +1,7 @@
 #ifndef RUYIJS_NATIVE_CONSTRUCTOR_TRACE_H
 #define RUYIJS_NATIVE_CONSTRUCTOR_TRACE_H
 #include "js/CallArgs.h"
-#include "vm/StandaloneTrace.h"
+#include "runtime/standalone_trace.h"
 
 namespace ruyijs {
 class NativeConstructorTrace final {
@@ -14,7 +14,7 @@ class NativeConstructorTrace final {
  private:
   JSContext* cx_;
   JS::CallArgs args_;
-  js::standalone_trace::CallState state_;
+  trace::CallState state_;
   bool enabled_ = false;
   bool ok_ = false;
 };

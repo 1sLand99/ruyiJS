@@ -6,7 +6,7 @@ security reports seriously.
 ## Reporting a vulnerability
 
 Please **do not** open a public issue. Report privately through GitHub's
-[private vulnerability reporting](https://github.com/LoseNine/ruyijs/security/advisories/new).
+[private vulnerability reporting](https://github.com/martinkeith700/ruyiJS/security/advisories/new).
 Include the affected version or commit, the impact, and the minimal steps to reproduce.
 
 We aim to acknowledge reports within 7 days and will coordinate a fix and disclosure with you.

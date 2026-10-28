@@ -1,0 +1,912 @@
+{
+  "libz-rs-sys": "0.6.3",
+  "zlib-rs": "0.6.3",
+  "brotli": "4792c8e4c4235f6b501f13dbd07a8b4b253eee21",
+  "files": [
+    {
+      "path": "libz-rs-sys/.cargo-checksum.json",
+      "source": "firefox:third_party/rust/libz-rs-sys/.cargo-checksum.json",
+      "sha256": "a8364a0489103646750f5f7a1eb33f882e27a1c3b26dc31f80c1425393829ec1"
+    },
+    {
+      "path": "libz-rs-sys/.cargo_vcs_info.json",
+      "source": "firefox:third_party/rust/libz-rs-sys/.cargo_vcs_info.json",
+      "sha256": "d3c57ef5e4109a33dc3ce75cf256492e8c83452cb79454107ccf883ffec112ee"
+    },
+    {
+      "path": "libz-rs-sys/Cargo.lock",
+      "source": "firefox:third_party/rust/libz-rs-sys/Cargo.lock",
+      "sha256": "b320015e87b806e1540666c0ec05529608a033bfc170a7ed5cc32ded2f07de4a"
+    },
+    {
+      "path": "libz-rs-sys/Cargo.toml",
+      "source": "firefox:third_party/rust/libz-rs-sys/Cargo.toml",
+      "sha256": "8675fba19b167b6958338d752ecac528d0a914202694dcee6592049932117b3f"
+    },
+    {
+      "path": "libz-rs-sys/Cargo.toml.orig",
+      "source": "firefox:third_party/rust/libz-rs-sys/Cargo.toml.orig",
+      "sha256": "8805503a133ce8b644f06606bc2b5b64fbbb9f5c9ef293736a5ad3720b3305c6"
+    },
+    {
+      "path": "libz-rs-sys/include/zconf.h",
+      "source": "firefox:third_party/rust/libz-rs-sys/include/zconf.h",
+      "sha256": "5a599b4ce082da17b8e137ae412e2f9b92548b6c824a4b32325ecd09547689f2"
+    },
+    {
+      "path": "libz-rs-sys/include/zlib.h",
+      "source": "firefox:third_party/rust/libz-rs-sys/include/zlib.h",
+      "sha256": "4fcbc6f942dd5aed116c1afeff00865f037316bd04474c03a556cc6de9ff84ec"
+    },
+    {
+      "path": "libz-rs-sys/include/zlib.map",
+      "source": "firefox:third_party/rust/libz-rs-sys/include/zlib.map",
+      "sha256": "5a3e2d8ac979bac89c15683810baa0d19a66d87fc01c5a7cda40e3d83d993049"
+    },
+    {
+      "path": "libz-rs-sys/LICENSE",
+      "source": "firefox:third_party/rust/libz-rs-sys/LICENSE",
+      "sha256": "e72111c52b7d96ebe25348dee19f0744f444d3c95ae6b1ecb6ccaecc5bce05ba"
+    },
+    {
+      "path": "libz-rs-sys/README.md",
+      "source": "firefox:third_party/rust/libz-rs-sys/README.md",
+      "sha256": "343f17be95dd6307fa54020b1c28f1733727d2e8ddce3ef0ab735279f2dab497"
+    },
+    {
+      "path": "libz-rs-sys/src/gz.rs",
+      "source": "firefox:third_party/rust/libz-rs-sys/src/gz.rs",
+      "sha256": "16147dbc53830d01480c3c1e46251dc66be4a4ec24f8a56bc1ba904d0c05c085"
+    },
+    {
+      "path": "libz-rs-sys/src/lib.rs",
+      "source": "firefox:third_party/rust/libz-rs-sys/src/lib.rs",
+      "sha256": "8437905dc0c500e47e0adb39e88dfcc5d6a6a7a5b6f105a8f3d150a1495511ba"
+    },
+    {
+      "path": "libz-rs-sys/src/test-data/example.gz",
+      "source": "firefox:third_party/rust/libz-rs-sys/src/test-data/example.gz",
+      "sha256": "9fabf7976e0f5e5dc9f7124aeeb0efcf2083989d418aa0094590d5df3f7cc088"
+    },
+    {
+      "path": "libz-rs-sys/src/test-data/example.txt",
+      "source": "firefox:third_party/rust/libz-rs-sys/src/test-data/example.txt",
+      "sha256": "94a0efa899d05d95b019aa45995085240cf0727f975d06198521feca376b894f"
+    },
+    {
+      "path": "libz-rs-sys/src/test-data/incomplete-magic.gz",
+      "source": "firefox:third_party/rust/libz-rs-sys/src/test-data/incomplete-magic.gz",
+      "sha256": "ffe679bb831c95b67dc17819c63c5090d221aac6f4c7bf530f594ab43d21fa1e"
+    },
+    {
+      "path": "libz-rs-sys/src/test-data/magic-only.gz",
+      "source": "firefox:third_party/rust/libz-rs-sys/src/test-data/magic-only.gz",
+      "sha256": "ee98dc6af27a9f1c8cc4aaa2fd05b5f6e7c98f51390253a5263b0d096c3510fe"
+    },
+    {
+      "path": "zlib-rs/.cargo-checksum.json",
+      "source": "firefox:third_party/rust/zlib-rs/.cargo-checksum.json",
+      "sha256": "1fc88a226087be75cbf80f1953e240a8e5bfa8c105d6d38ebca72ebd030fe5b0"
+    },
+    {
+      "path": "zlib-rs/.cargo_vcs_info.json",
+      "source": "firefox:third_party/rust/zlib-rs/.cargo_vcs_info.json",
+      "sha256": "ebb5b0a855eb89118f32f025fca393774ceeba91f0c35129a5eb7c93be525c56"
+    },
+    {
+      "path": "zlib-rs/Cargo.lock",
+      "source": "firefox:third_party/rust/zlib-rs/Cargo.lock",
+      "sha256": "ad9cc5ec450480fba75706c9e7dfb8dca1d20484da852dea94ae0ad425528a4e"
+    },
+    {
+      "path": "zlib-rs/Cargo.toml",
+      "source": "firefox:third_party/rust/zlib-rs/Cargo.toml",
+      "sha256": "af1087327731cc6e638105ea18cc19cf89101906d6e934059a8e1121d7a49b2d"
+    },
+    {
+      "path": "zlib-rs/Cargo.toml.orig",
+      "source": "firefox:third_party/rust/zlib-rs/Cargo.toml.orig",
+      "sha256": "ef89bfca241d81a95c187d7cd49b29eac1139b5e45a1f329c07a2695df428898"
+    },
+    {
+      "path": "zlib-rs/LICENSE",
+      "source": "firefox:third_party/rust/zlib-rs/LICENSE",
+      "sha256": "e72111c52b7d96ebe25348dee19f0744f444d3c95ae6b1ecb6ccaecc5bce05ba"
+    },
+    {
+      "path": "zlib-rs/README.md",
+      "source": "firefox:third_party/rust/zlib-rs/README.md",
+      "sha256": "8e906735af9e4778dad561aaa7f6627f24c9a8d7527eb2334c3e7cd64f196390"
+    },
+    {
+      "path": "zlib-rs/src/adler32/avx2.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/adler32/avx2.rs",
+      "sha256": "7aaa38f49d28d2a2259356e99538a77d4e945ab64822fa500fa7d1ed3c03740f"
+    },
+    {
+      "path": "zlib-rs/src/adler32/avx512.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/adler32/avx512.rs",
+      "sha256": "8d81755ce06b7a370318c5f2f2d19d51cbac1ea3814d31b500dfe8257e206917"
+    },
+    {
+      "path": "zlib-rs/src/adler32/avx512_vnni.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/adler32/avx512_vnni.rs",
+      "sha256": "8b3d068c0d456581966fad39e7f1befa98be5b80e95365ebd65330cdafc9ea2c"
+    },
+    {
+      "path": "zlib-rs/src/adler32/generic.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/adler32/generic.rs",
+      "sha256": "4ee8d80f0fdfae891e036592ca86a0ecc0817c1ece7e9057bab5f2d17669657a"
+    },
+    {
+      "path": "zlib-rs/src/adler32/neon.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/adler32/neon.rs",
+      "sha256": "d5ccad71b9ccd868556d6fc8eef9daf0a066a965011c7bf6aee3e4134a8be80c"
+    },
+    {
+      "path": "zlib-rs/src/adler32/wasm.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/adler32/wasm.rs",
+      "sha256": "18c66bb179c78b11c52c4cf48ef2e25114016921ec03baeefe2d38b5e42e8c45"
+    },
+    {
+      "path": "zlib-rs/src/adler32.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/adler32.rs",
+      "sha256": "16743fc57e84754b86c5e64b14d89db107524b9fbb4d43002220780a07544736"
+    },
+    {
+      "path": "zlib-rs/src/allocate.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/allocate.rs",
+      "sha256": "04b507dc81a82300e0e9c33d1bde3d329bf84b2a376857e1e97f298183917d34"
+    },
+    {
+      "path": "zlib-rs/src/c_api.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/c_api.rs",
+      "sha256": "7b7baace3688e0c7d715caef6468119dd26f29b6468d8373d5494f86e7c2198f"
+    },
+    {
+      "path": "zlib-rs/src/cpu_features.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/cpu_features.rs",
+      "sha256": "8695eaf9e685ed95182922b60e22384a45b04a8eaae1f5fbd579ba27e09e4602"
+    },
+    {
+      "path": "zlib-rs/src/crc32/acle.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/crc32/acle.rs",
+      "sha256": "888122f712f7cacefe1e50d42b97ea0a3c5d6f32a5b4be632461a446ae1ed6da"
+    },
+    {
+      "path": "zlib-rs/src/crc32/braid.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/crc32/braid.rs",
+      "sha256": "83736f9a054647bd88130557e24ce77d7ee98be6b822d9f02725bfa3d0f2132b"
+    },
+    {
+      "path": "zlib-rs/src/crc32/combine.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/crc32/combine.rs",
+      "sha256": "08c8b21d0eaee60de8b21af2018f17dcf1169ff4fa6d62c331dd04d92e90f2cc"
+    },
+    {
+      "path": "zlib-rs/src/crc32/pclmulqdq.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/crc32/pclmulqdq.rs",
+      "sha256": "f2a9cb1e7f807cf70840702211a15254914b28854efac905cab5a260806e2377"
+    },
+    {
+      "path": "zlib-rs/src/crc32/vpclmulqdq.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/crc32/vpclmulqdq.rs",
+      "sha256": "ac06986f57c2516d8f42fed62c53cec98282a637de9cef43c3ce01f38c537b51"
+    },
+    {
+      "path": "zlib-rs/src/crc32.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/crc32.rs",
+      "sha256": "284fc0cb4f76d9a1847df3dbd68a2fb104c3dd1d876e9059273bc2c547bf0da3"
+    },
+    {
+      "path": "zlib-rs/src/deflate/algorithm/fast.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/algorithm/fast.rs",
+      "sha256": "45d6c421d6430762019efd17cec3dbd5223f2deb5a7805a130cb11d293253e45"
+    },
+    {
+      "path": "zlib-rs/src/deflate/algorithm/huff.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/algorithm/huff.rs",
+      "sha256": "2ffbc3987700e7b9c88b7fc4697d3bafe519d2d2dd4fbdc55cff4e91ded7d03c"
+    },
+    {
+      "path": "zlib-rs/src/deflate/algorithm/medium.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/algorithm/medium.rs",
+      "sha256": "28e7a9139aca14aeadd30d5a158e1c3c15f57fd6afa2ea57fd86aa36a0f28a51"
+    },
+    {
+      "path": "zlib-rs/src/deflate/algorithm/mod.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/algorithm/mod.rs",
+      "sha256": "dca1e0ce47926948da214c73c40b18e7827e6fe8750d5390bd9334c6d61aa09e"
+    },
+    {
+      "path": "zlib-rs/src/deflate/algorithm/quick.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/algorithm/quick.rs",
+      "sha256": "7ff4f44f407ffdf63d52c168583ad924960f02f574f9c4d81f21d6badbb8de3e"
+    },
+    {
+      "path": "zlib-rs/src/deflate/algorithm/rle.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/algorithm/rle.rs",
+      "sha256": "9eca44009d90d408a6115986e45abab043a802d4586c3c90ddbc9b470925940a"
+    },
+    {
+      "path": "zlib-rs/src/deflate/algorithm/slow.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/algorithm/slow.rs",
+      "sha256": "11e1b1c08f0fcaf56667297be238427cbb85d4cc0bfd683df57a579b406a8a02"
+    },
+    {
+      "path": "zlib-rs/src/deflate/algorithm/stored.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/algorithm/stored.rs",
+      "sha256": "40c60591307409a5ea5f8e8505fbae70ca4a69a258b151c829db9bc5ffe02e04"
+    },
+    {
+      "path": "zlib-rs/src/deflate/compare256.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/compare256.rs",
+      "sha256": "27fe33dee6c4404ef1030601c4f637934809c82414c8c113731a1b81125efcc8"
+    },
+    {
+      "path": "zlib-rs/src/deflate/hash_calc.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/hash_calc.rs",
+      "sha256": "89cd80a48f979e6dfb36ae3bb0f0c874409c92a7aef652b14d6418aeaf695668"
+    },
+    {
+      "path": "zlib-rs/src/deflate/longest_match.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/longest_match.rs",
+      "sha256": "ac8c3fb04682cd476c3f8cb63c5ea861c25ffdde1cbf344c24b27e77c75f05df"
+    },
+    {
+      "path": "zlib-rs/src/deflate/pending.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/pending.rs",
+      "sha256": "b1934d6d607a1e916df824c48a2ebe3bcf024c08239dfe7778f2cb3dec4d5041"
+    },
+    {
+      "path": "zlib-rs/src/deflate/slide_hash.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/slide_hash.rs",
+      "sha256": "7d29a2cff49623805c61f77be6b761ffb3bdadcfa02250280dfa2e3688c0fb1f"
+    },
+    {
+      "path": "zlib-rs/src/deflate/sym_buf.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/sym_buf.rs",
+      "sha256": "1af4cf0bca9cc2cc96a1fab6b5e8caffcefd882894ffeb12b3d5a3ee7e0c3875"
+    },
+    {
+      "path": "zlib-rs/src/deflate/test-data/inflate_buf_error.dat",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/test-data/inflate_buf_error.dat",
+      "sha256": "254f280f8f1e8914bd12d8bcd3813e5c08083b1b46d8d643c8e2ebe109e75cb8"
+    },
+    {
+      "path": "zlib-rs/src/deflate/test-data/paper-100k.pdf",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/test-data/paper-100k.pdf",
+      "sha256": "60f73a051b7ca35bfec44734b2eed7736cb5c0b7f728beb7b97ade6c5e44849b"
+    },
+    {
+      "path": "zlib-rs/src/deflate/trees_tbl.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/trees_tbl.rs",
+      "sha256": "cbb897a638b6fa7bd007b8394dbaa5ac52c6d935e21e9593d66e8c348b6e44c7"
+    },
+    {
+      "path": "zlib-rs/src/deflate/window.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate/window.rs",
+      "sha256": "dda50764d7f9c6cf278f42801227eb258d1034472f84dac3105b1d64771466e8"
+    },
+    {
+      "path": "zlib-rs/src/deflate.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/deflate.rs",
+      "sha256": "94c7b8bf2ae4f887d2ac5e4e3d8c0143e5077f72a7b53d3ca82c6666ff3915df"
+    },
+    {
+      "path": "zlib-rs/src/inflate/bitreader.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/inflate/bitreader.rs",
+      "sha256": "0623e37efc4f44e62bd22491eddd6b2a0024ceece867cbcf842aa4568cbb42af"
+    },
+    {
+      "path": "zlib-rs/src/inflate/infback.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/inflate/infback.rs",
+      "sha256": "5a081fb41e5c360ff9d481bee12986a9a0ed44189d9871a0ccef1b39840896d2"
+    },
+    {
+      "path": "zlib-rs/src/inflate/inffixed_tbl.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/inflate/inffixed_tbl.rs",
+      "sha256": "eb1ed1927ca07b61fe30ae8461ce62e7da28c595416e687a26db57c8eac8f4a1"
+    },
+    {
+      "path": "zlib-rs/src/inflate/inftrees.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/inflate/inftrees.rs",
+      "sha256": "156c3628ec9294446aaac5f87cd6b3aa2607bcf0277053ca4bcdde5004a5c03d"
+    },
+    {
+      "path": "zlib-rs/src/inflate/window.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/inflate/window.rs",
+      "sha256": "c66ac01d26b1aeb9e399056e724ac405ba3653eb3fbd09635c4f083a21f0a2cf"
+    },
+    {
+      "path": "zlib-rs/src/inflate/writer.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/inflate/writer.rs",
+      "sha256": "02e5245f61416815e64db48c4bef473e5b95518157d54e50b9eef42f710afabf"
+    },
+    {
+      "path": "zlib-rs/src/inflate.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/inflate.rs",
+      "sha256": "cb0550d09e0735c7ad7e3f59bc37d6315ff92e10e82c75830fcce2e112025c13"
+    },
+    {
+      "path": "zlib-rs/src/lib.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/lib.rs",
+      "sha256": "01b9aa918747a262d1cb23703c59d9c9a1d84a6b52c8bc3dd8202bf9e367c91c"
+    },
+    {
+      "path": "zlib-rs/src/stable.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/stable.rs",
+      "sha256": "4444f4361b5023ce8161f26845c67a11f4b3a85f6f4037b7252fef97d33f4b32"
+    },
+    {
+      "path": "zlib-rs/src/weak_slice.rs",
+      "source": "firefox:third_party/rust/zlib-rs/src/weak_slice.rs",
+      "sha256": "5b1c6c5f57ea7f8215da88719e506e43f95e586c6d20f0fb849d69fcc71bbff4"
+    },
+    {
+      "path": "brotli/common/constants.c",
+      "source": "firefox:modules/brotli/common/constants.c",
+      "sha256": "630f40ca2ac787025175eaf39b9569a60aff6ddec7e5085197e4cb0d43641b0d"
+    },
+    {
+      "path": "brotli/common/constants.h",
+      "source": "firefox:modules/brotli/common/constants.h",
+      "sha256": "c9c898542360e811dc44aa9be270d21ce0d18f3ecf45310f3d9f285f3692a59e"
+    },
+    {
+      "path": "brotli/common/context.c",
+      "source": "firefox:modules/brotli/common/context.c",
+      "sha256": "c9aa1acb35af38c90c4a38ba168885b649838236b2d57adb5e76d687bdbe252e"
+    },
+    {
+      "path": "brotli/common/context.h",
+      "source": "firefox:modules/brotli/common/context.h",
+      "sha256": "2745ef910928a4acd58e1cb98128a0a228fa1812c61e69538c9d393d405bf047"
+    },
+    {
+      "path": "brotli/common/dictionary.c",
+      "source": "firefox:modules/brotli/common/dictionary.c",
+      "sha256": "0890056e4ae595efab6bbf3bf1fd244332e2cfad3adcb9f5793ee29a8f3a18c5"
+    },
+    {
+      "path": "brotli/common/dictionary.h",
+      "source": "firefox:modules/brotli/common/dictionary.h",
+      "sha256": "bfb4f010a2279c53a039ec6f095a12ab62c7d49ab138e385a16caf3904341b10"
+    },
+    {
+      "path": "brotli/common/dictionary_inc.h",
+      "source": "firefox:modules/brotli/common/dictionary_inc.h",
+      "sha256": "55b98973df9dcb353bd78b2b573fb7338ab55d98fb5571ad93939095978768e8"
+    },
+    {
+      "path": "brotli/common/platform.c",
+      "source": "firefox:modules/brotli/common/platform.c",
+      "sha256": "fce95889e6b1d1a91c0baa2ee0f3b83a41b670a4f51a5053185ffbed6bde71fd"
+    },
+    {
+      "path": "brotli/common/platform.h",
+      "source": "firefox:modules/brotli/common/platform.h",
+      "sha256": "b6de12c27a36121589554dae8277c4aa0e1300a2d5a6b066f0ac313098ec4777"
+    },
+    {
+      "path": "brotli/common/shared_dictionary.c",
+      "source": "firefox:modules/brotli/common/shared_dictionary.c",
+      "sha256": "0cf405b0155230e060b9e0855bb22379037362948828b98338f203be07923d0e"
+    },
+    {
+      "path": "brotli/common/shared_dictionary_internal.h",
+      "source": "firefox:modules/brotli/common/shared_dictionary_internal.h",
+      "sha256": "e9e343e5d4ddd0f87a9579aab6796dd82af08639abfda122e874a97e896c6b6a"
+    },
+    {
+      "path": "brotli/common/static_init.h",
+      "source": "firefox:modules/brotli/common/static_init.h",
+      "sha256": "be55ce94cace1a6c9dd9460ae30a5b7942834fd8c1003ffdef56df0b35dbcfd7"
+    },
+    {
+      "path": "brotli/common/transform.c",
+      "source": "firefox:modules/brotli/common/transform.c",
+      "sha256": "47f229a79c3542ea57ec07145d7eaf77300a02816d95695332f9911ea19d6ab3"
+    },
+    {
+      "path": "brotli/common/transform.h",
+      "source": "firefox:modules/brotli/common/transform.h",
+      "sha256": "b79dd99d1dcc618c1a4284b74dd04adda099fc3f65f906924991a736e09c125c"
+    },
+    {
+      "path": "brotli/common/version.h",
+      "source": "firefox:modules/brotli/common/version.h",
+      "sha256": "792d03d8feff8168edf639899f72b71a37e9cbd9f178e3be397ccef29d3346b0"
+    },
+    {
+      "path": "brotli/dec/bit_reader.c",
+      "source": "firefox:modules/brotli/dec/bit_reader.c",
+      "sha256": "6126ebebd3adbc96430c2b75ccaec02b188901f2a17960e6a4606470e71925ec"
+    },
+    {
+      "path": "brotli/dec/bit_reader.h",
+      "source": "firefox:modules/brotli/dec/bit_reader.h",
+      "sha256": "f23fbb82054c5e4405e2a262df9cf4c4756b3e0e476ac849c0dd8f741018d161"
+    },
+    {
+      "path": "brotli/dec/decode.c",
+      "source": "firefox:modules/brotli/dec/decode.c",
+      "sha256": "846bfbe09cc0b98c992ae5c6b0a422af47fc89301dfbe35a4d5c80c1d644a721"
+    },
+    {
+      "path": "brotli/dec/huffman.c",
+      "source": "firefox:modules/brotli/dec/huffman.c",
+      "sha256": "b7c973c2918c6765c4eb534c3ae314055d535b6d1fafb021cee5f7eae170aae6"
+    },
+    {
+      "path": "brotli/dec/huffman.h",
+      "source": "firefox:modules/brotli/dec/huffman.h",
+      "sha256": "09f3a1f7608b09df131342c9759f4a63c19b0e784bda5e474ec01eb72699079d"
+    },
+    {
+      "path": "brotli/dec/prefix.c",
+      "source": "firefox:modules/brotli/dec/prefix.c",
+      "sha256": "0a31304f440f7bb2017d52b83ae35cb428cbc5ac2fc172c8eec2fea449c2f7cd"
+    },
+    {
+      "path": "brotli/dec/prefix.h",
+      "source": "firefox:modules/brotli/dec/prefix.h",
+      "sha256": "fe1f3630f78a0ed3f79146a52d8e480c12d130ccfe9781f03d0edc581c3b9e83"
+    },
+    {
+      "path": "brotli/dec/prefix_inc.h",
+      "source": "firefox:modules/brotli/dec/prefix_inc.h",
+      "sha256": "e1ade26b7b1e1e56b1a91af20ef93f81ef7a4ed83e0543fd6d9eb29f5c6d2983"
+    },
+    {
+      "path": "brotli/dec/state.c",
+      "source": "firefox:modules/brotli/dec/state.c",
+      "sha256": "66a7c3d9c01cda374d33d3693ba45d059ff00b12114a8844ee4f2519ba2af14e"
+    },
+    {
+      "path": "brotli/dec/state.h",
+      "source": "firefox:modules/brotli/dec/state.h",
+      "sha256": "8937c3799c177eacfaf3c0dba8da8c2558f435d6baffa2d787aec3212eaca041"
+    },
+    {
+      "path": "brotli/dec/static_init.c",
+      "source": "firefox:modules/brotli/dec/static_init.c",
+      "sha256": "a4a308e394fe05a124d919977b3f457a06363615a882dce058f329edcf7dc851"
+    },
+    {
+      "path": "brotli/dec/static_init.h",
+      "source": "firefox:modules/brotli/dec/static_init.h",
+      "sha256": "a4f13d0e5c770ad92fb2d6b8d4a8f93bfe70b1e97352306636a1119a6f44f270"
+    },
+    {
+      "path": "brotli/enc/backward_references.c",
+      "source": "firefox:modules/brotli/enc/backward_references.c",
+      "sha256": "4c59bbd520d4a2cfce5c0971e90533fbc6d202af5d3ed50b451b13cc15f98e6f"
+    },
+    {
+      "path": "brotli/enc/backward_references.h",
+      "source": "firefox:modules/brotli/enc/backward_references.h",
+      "sha256": "ab3af6c955add46840b8e920ae2daf5afb971b7c9ad05ad0720bdfc9aabc298b"
+    },
+    {
+      "path": "brotli/enc/backward_references_hq.c",
+      "source": "firefox:modules/brotli/enc/backward_references_hq.c",
+      "sha256": "6cfa50eaae8e0e56627c72d61c71c818dcae377bdb6f382abd74831fd0cc39b2"
+    },
+    {
+      "path": "brotli/enc/backward_references_hq.h",
+      "source": "firefox:modules/brotli/enc/backward_references_hq.h",
+      "sha256": "6ffa64b045c878600aa694f92b301cf6ff854e0e79959aeb9e124864789e210d"
+    },
+    {
+      "path": "brotli/enc/backward_references_inc.h",
+      "source": "firefox:modules/brotli/enc/backward_references_inc.h",
+      "sha256": "c53d844433d3cd60e4114f9c08c42628c88b3916af39837bf05c59bc85cd433c"
+    },
+    {
+      "path": "brotli/enc/bit_cost.c",
+      "source": "firefox:modules/brotli/enc/bit_cost.c",
+      "sha256": "544c6af87753f9e540873c2b7984d73297a53576fc0b352b34121687be2f08e4"
+    },
+    {
+      "path": "brotli/enc/bit_cost.h",
+      "source": "firefox:modules/brotli/enc/bit_cost.h",
+      "sha256": "1336cd6c28117921ad0275a39188d17ee91eb96e8b6e362c940df488ab8068a1"
+    },
+    {
+      "path": "brotli/enc/bit_cost_inc.h",
+      "source": "firefox:modules/brotli/enc/bit_cost_inc.h",
+      "sha256": "71a2c3736f0039df51ba6b38741356fdbd0792d4f1068adfdaecf0df84f04329"
+    },
+    {
+      "path": "brotli/enc/block_encoder_inc.h",
+      "source": "firefox:modules/brotli/enc/block_encoder_inc.h",
+      "sha256": "fa99d29142869d28e6b4c471993e44b989f1350a9cfdbed7342f4b915329b9a8"
+    },
+    {
+      "path": "brotli/enc/block_splitter.c",
+      "source": "firefox:modules/brotli/enc/block_splitter.c",
+      "sha256": "34699e570f752cf0bd2643cb8d6a6b17e79add6856bdaf0b6007927fe509c5b1"
+    },
+    {
+      "path": "brotli/enc/block_splitter.h",
+      "source": "firefox:modules/brotli/enc/block_splitter.h",
+      "sha256": "f43db7ef733e5c87dd1fe9cef2465e02dde91d0121efae74b2c1c357ed1db267"
+    },
+    {
+      "path": "brotli/enc/block_splitter_inc.h",
+      "source": "firefox:modules/brotli/enc/block_splitter_inc.h",
+      "sha256": "4fd9d95ac3fc08992d6fe3d9cc7855a62417326046bb0666b8ad7196abd3c944"
+    },
+    {
+      "path": "brotli/enc/brotli_bit_stream.c",
+      "source": "firefox:modules/brotli/enc/brotli_bit_stream.c",
+      "sha256": "ea95e71753a6b1b651e5315013900c5d79eb074245be750d1afc3ec5a8b19982"
+    },
+    {
+      "path": "brotli/enc/brotli_bit_stream.h",
+      "source": "firefox:modules/brotli/enc/brotli_bit_stream.h",
+      "sha256": "747101dc514e7257e06c268bac2de9696fbb36ebc1a05787b67c6a2b52a7376e"
+    },
+    {
+      "path": "brotli/enc/cluster.c",
+      "source": "firefox:modules/brotli/enc/cluster.c",
+      "sha256": "23d58bc8b628c9d168f8911d9304d4964e0f992f68e6d62daefe7eb837b07cb4"
+    },
+    {
+      "path": "brotli/enc/cluster.h",
+      "source": "firefox:modules/brotli/enc/cluster.h",
+      "sha256": "fad2c4dea68fa93cfa61fe2234421163b15e0952446c583053a34a4b70b856bc"
+    },
+    {
+      "path": "brotli/enc/cluster_inc.h",
+      "source": "firefox:modules/brotli/enc/cluster_inc.h",
+      "sha256": "9875a8a2822b029dad7841eea87096b6e059087a066f4b3bc055a402d67f1291"
+    },
+    {
+      "path": "brotli/enc/command.c",
+      "source": "firefox:modules/brotli/enc/command.c",
+      "sha256": "3f72daa062889ce5e662993095da5477f47815896867476b3f7b34d3a67fbd9d"
+    },
+    {
+      "path": "brotli/enc/command.h",
+      "source": "firefox:modules/brotli/enc/command.h",
+      "sha256": "2e64e8b9ff12ae9be4c711ad25534f9c93b0fbac82f5a843ac42cc0a8168e1fb"
+    },
+    {
+      "path": "brotli/enc/compound_dictionary.c",
+      "source": "firefox:modules/brotli/enc/compound_dictionary.c",
+      "sha256": "4046dd0040ad51d4a550a747e5c4643d7cf801de426698e7566e8e2fc0c1c9ae"
+    },
+    {
+      "path": "brotli/enc/compound_dictionary.h",
+      "source": "firefox:modules/brotli/enc/compound_dictionary.h",
+      "sha256": "8a1926225d68075c58259260470fe193115748df5419c27b816f86473426cdd5"
+    },
+    {
+      "path": "brotli/enc/compress_fragment.c",
+      "source": "firefox:modules/brotli/enc/compress_fragment.c",
+      "sha256": "0e14cfce93c2a461a5d6be626e9ed30340bab980ccc76f502a23d2c112c7c94f"
+    },
+    {
+      "path": "brotli/enc/compress_fragment.h",
+      "source": "firefox:modules/brotli/enc/compress_fragment.h",
+      "sha256": "3b91f1b14055d1908fcfd03bdc4a7fc52371233bb1c6ff28755f5248f5726a82"
+    },
+    {
+      "path": "brotli/enc/compress_fragment_two_pass.c",
+      "source": "firefox:modules/brotli/enc/compress_fragment_two_pass.c",
+      "sha256": "938fc18b7a5f1e41f360a167a31a7297920160f08bff92f04d97788c3d32bfd6"
+    },
+    {
+      "path": "brotli/enc/compress_fragment_two_pass.h",
+      "source": "firefox:modules/brotli/enc/compress_fragment_two_pass.h",
+      "sha256": "aae9785aa1003e14b3eeccc263c4e583c48871577a92bf0662de40763c7fb73e"
+    },
+    {
+      "path": "brotli/enc/dictionary_hash.c",
+      "source": "firefox:modules/brotli/enc/dictionary_hash.c",
+      "sha256": "1225337a2bad9cc08d72671757682ec90ab99388f00bfa73cd469a5e6e5e9778"
+    },
+    {
+      "path": "brotli/enc/dictionary_hash.h",
+      "source": "firefox:modules/brotli/enc/dictionary_hash.h",
+      "sha256": "a0b125ef70ac49b0d0006aa30a8d226d5f8d1756c82c3c0d50ce08e9ecf4f4a0"
+    },
+    {
+      "path": "brotli/enc/dictionary_hash_inc.h",
+      "source": "firefox:modules/brotli/enc/dictionary_hash_inc.h",
+      "sha256": "6effa6998dbb024d12766b9240beb549a8ee50fd6fdadf4a61ec8899eb9ac4d4"
+    },
+    {
+      "path": "brotli/enc/encode.c",
+      "source": "firefox:modules/brotli/enc/encode.c",
+      "sha256": "b2647d12cccc3d3852f80637b04b0c4d5849254db0f3496f2e11bcad29eecc32"
+    },
+    {
+      "path": "brotli/enc/encoder_dict.c",
+      "source": "firefox:modules/brotli/enc/encoder_dict.c",
+      "sha256": "2c538ce0bf35bce2f05b270a2f165793661fc7a427d91f355c2722a3dd345b11"
+    },
+    {
+      "path": "brotli/enc/encoder_dict.h",
+      "source": "firefox:modules/brotli/enc/encoder_dict.h",
+      "sha256": "e300e61e3b464c7e572bf1921547949e3cb0e87f24770ff611c75ef8459f398d"
+    },
+    {
+      "path": "brotli/enc/entropy_encode.c",
+      "source": "firefox:modules/brotli/enc/entropy_encode.c",
+      "sha256": "ea15125ed036547e57553a56b04ac50eb91a48424ccc5cf29d13433419fa4723"
+    },
+    {
+      "path": "brotli/enc/entropy_encode.h",
+      "source": "firefox:modules/brotli/enc/entropy_encode.h",
+      "sha256": "d916681f7aa9fe1ed3ec671be2d5b0687e0ac5c67f0f69dd781084746751899e"
+    },
+    {
+      "path": "brotli/enc/entropy_encode_static.h",
+      "source": "firefox:modules/brotli/enc/entropy_encode_static.h",
+      "sha256": "ff27cd498408d797baa4cd6750b8282c4d70100b4c000346e2a888102451debf"
+    },
+    {
+      "path": "brotli/enc/fast_log.c",
+      "source": "firefox:modules/brotli/enc/fast_log.c",
+      "sha256": "7e08232d781a8e4a92f59869a492b0a8982cb3e3c51b2d4be808f59f8643dc88"
+    },
+    {
+      "path": "brotli/enc/fast_log.h",
+      "source": "firefox:modules/brotli/enc/fast_log.h",
+      "sha256": "74a76746f3eb2e673411d0563ff22a22575d0be4dcb29da0a5ee2039aed6df43"
+    },
+    {
+      "path": "brotli/enc/find_match_length.h",
+      "source": "firefox:modules/brotli/enc/find_match_length.h",
+      "sha256": "d03ef29e28f89b4b74124d0315e173014cbd724dcff4d3020a9b2aad0d8e60b7"
+    },
+    {
+      "path": "brotli/enc/hash.h",
+      "source": "firefox:modules/brotli/enc/hash.h",
+      "sha256": "679da462004871e6bbee52649e29b4f7a5615dd9099d5f0b0e8e09ce8b5213f8"
+    },
+    {
+      "path": "brotli/enc/hash_base.h",
+      "source": "firefox:modules/brotli/enc/hash_base.h",
+      "sha256": "e51ef6971fe4ab11a58eb524013999645b595779b4519dc6c10af4c333a48d9b"
+    },
+    {
+      "path": "brotli/enc/hash_composite_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_composite_inc.h",
+      "sha256": "6b77329089219d157954ae229ce438a127e123dec8aff6ca437d73845055abd4"
+    },
+    {
+      "path": "brotli/enc/hash_forgetful_chain_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_forgetful_chain_inc.h",
+      "sha256": "3dacf20306b199076c8cd244efd1e03e6623e378d3ea2a0ff05932628e76c407"
+    },
+    {
+      "path": "brotli/enc/hash_longest_match64_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_longest_match64_inc.h",
+      "sha256": "fc3e40fc5bbb8e7bc31fb63ca46a390e80d269375ccbd86883c0da67c993f667"
+    },
+    {
+      "path": "brotli/enc/hash_longest_match64_simd_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_longest_match64_simd_inc.h",
+      "sha256": "2648f19083bacf378bc57bc15ab05274be879891cc0e2e4238f6c3c5401b13ae"
+    },
+    {
+      "path": "brotli/enc/hash_longest_match_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_longest_match_inc.h",
+      "sha256": "fbb64fc2765277c829bc846a20253c1622f163117ecc05c86c1428154fd64ade"
+    },
+    {
+      "path": "brotli/enc/hash_longest_match_quickly_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_longest_match_quickly_inc.h",
+      "sha256": "7c18eac6a53c13d8ed32d9e5824fe1d2e08234fe32ad09bddaaf2168d6e4f22b"
+    },
+    {
+      "path": "brotli/enc/hash_longest_match_simd_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_longest_match_simd_inc.h",
+      "sha256": "012c4465103a797296629d8e5afb871b0cd61be74d325279c58b460efd5bb4cc"
+    },
+    {
+      "path": "brotli/enc/hash_rolling_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_rolling_inc.h",
+      "sha256": "4e8e46bf74dfccb32d3cf05c29b0ada93841ea78d42863f4aec255e164332d68"
+    },
+    {
+      "path": "brotli/enc/hash_to_binary_tree_inc.h",
+      "source": "firefox:modules/brotli/enc/hash_to_binary_tree_inc.h",
+      "sha256": "78a8c973f2cdba8085019f7f18c48b5c5d558c797eec5e1104596e452c06d36d"
+    },
+    {
+      "path": "brotli/enc/histogram.c",
+      "source": "firefox:modules/brotli/enc/histogram.c",
+      "sha256": "cf8cbd4310f9b41a718ca200bfd8f7c07159729e51a5aeda1f2f809a954260bf"
+    },
+    {
+      "path": "brotli/enc/histogram.h",
+      "source": "firefox:modules/brotli/enc/histogram.h",
+      "sha256": "12a8632ca3b98350bd9aa38a439a21bf63378bcd867ba43076a5bdebf0fb03b6"
+    },
+    {
+      "path": "brotli/enc/histogram_inc.h",
+      "source": "firefox:modules/brotli/enc/histogram_inc.h",
+      "sha256": "618857bb0d76c2647b26730413ddcf1ddecc63567adb5a1437eb7ff711670a71"
+    },
+    {
+      "path": "brotli/enc/literal_cost.c",
+      "source": "firefox:modules/brotli/enc/literal_cost.c",
+      "sha256": "70b9efae900d89ba610087113bea9225debbae5db21825a9bad0051c1ea5451b"
+    },
+    {
+      "path": "brotli/enc/literal_cost.h",
+      "source": "firefox:modules/brotli/enc/literal_cost.h",
+      "sha256": "3504da473324e0d2be76c69b5e9d1ce7d97409ff5920bd3928a05c3de2a47009"
+    },
+    {
+      "path": "brotli/enc/matching_tag_mask.h",
+      "source": "firefox:modules/brotli/enc/matching_tag_mask.h",
+      "sha256": "3106496cc6baa84f6dab86395002b2638ba64926de7858cd6943afd8b6c7d162"
+    },
+    {
+      "path": "brotli/enc/memory.c",
+      "source": "firefox:modules/brotli/enc/memory.c",
+      "sha256": "a491c8110e9e68db26c10e008abfc69c07d6756f2b9c1f56611295aad7a817d2"
+    },
+    {
+      "path": "brotli/enc/memory.h",
+      "source": "firefox:modules/brotli/enc/memory.h",
+      "sha256": "01ee4983c81f1b935841d4e2ebe2588cf590ea66dcce493b61c7430da8baaec5"
+    },
+    {
+      "path": "brotli/enc/metablock.c",
+      "source": "firefox:modules/brotli/enc/metablock.c",
+      "sha256": "8217f29edd2366110cb235e2e3e7e714ba89c256701bfd0b9bb001e83a7b9391"
+    },
+    {
+      "path": "brotli/enc/metablock.h",
+      "source": "firefox:modules/brotli/enc/metablock.h",
+      "sha256": "f200f4660b5c3670fdde8ed7300bcd7efefdb355e3132bd3b610e3b795061196"
+    },
+    {
+      "path": "brotli/enc/metablock_inc.h",
+      "source": "firefox:modules/brotli/enc/metablock_inc.h",
+      "sha256": "e68583ed633b96aacfae43c4e7810ebebc09af4414cddc49506fcb2069cbe343"
+    },
+    {
+      "path": "brotli/enc/params.h",
+      "source": "firefox:modules/brotli/enc/params.h",
+      "sha256": "55f3508a6d8019192a43110b62d9284277e19b9d301cebe7bed27855952d1b25"
+    },
+    {
+      "path": "brotli/enc/prefix.h",
+      "source": "firefox:modules/brotli/enc/prefix.h",
+      "sha256": "706a1973c2229d03eb350dcc2e6909a94175eb8581a9f890d9bda45fcc0f544d"
+    },
+    {
+      "path": "brotli/enc/quality.h",
+      "source": "firefox:modules/brotli/enc/quality.h",
+      "sha256": "b6dfb3e8433dfbb97693aa02f551870c7739e7645fcf6d9322631e02ea09c35d"
+    },
+    {
+      "path": "brotli/enc/ringbuffer.h",
+      "source": "firefox:modules/brotli/enc/ringbuffer.h",
+      "sha256": "f67876b441464cd931fb7db0c84d05fc7ac570c47ca9872751ae9c7c7c4a2455"
+    },
+    {
+      "path": "brotli/enc/state.h",
+      "source": "firefox:modules/brotli/enc/state.h",
+      "sha256": "c7996820e3f166650e2fb9187c0f94a8a5e21bf353dbdd1c783f22e428904f9e"
+    },
+    {
+      "path": "brotli/enc/static_dict.c",
+      "source": "firefox:modules/brotli/enc/static_dict.c",
+      "sha256": "9810eb7f9ab63a5720bb4a7fd089f3cbe787b10875129f1d1ed1021bc2416724"
+    },
+    {
+      "path": "brotli/enc/static_dict.h",
+      "source": "firefox:modules/brotli/enc/static_dict.h",
+      "sha256": "4362117cf788185ead13cd181a0d7db437a05a2cdc619646f93ff3721d53ca3c"
+    },
+    {
+      "path": "brotli/enc/static_dict_lut.c",
+      "source": "firefox:modules/brotli/enc/static_dict_lut.c",
+      "sha256": "c06f693a31fe244858d0ec8268387657800ef42c768571be9e96fef26951d988"
+    },
+    {
+      "path": "brotli/enc/static_dict_lut.h",
+      "source": "firefox:modules/brotli/enc/static_dict_lut.h",
+      "sha256": "be10d9c9481e915424ea79e29c2e18f5dac9cb4e18a5fb07eeb7a7fb9b1637b2"
+    },
+    {
+      "path": "brotli/enc/static_dict_lut_inc.h",
+      "source": "firefox:modules/brotli/enc/static_dict_lut_inc.h",
+      "sha256": "561574bed6ff61709e20a196b611825f239aa79cd1c54c96b96757162edcd3d4"
+    },
+    {
+      "path": "brotli/enc/static_init.h",
+      "source": "firefox:modules/brotli/enc/static_init.h",
+      "sha256": "f853f6739633044ac6acc27e0ba074b315e230a4f99aac46a98b53880af24441"
+    },
+    {
+      "path": "brotli/enc/static_init_enc.c",
+      "source": "firefox:modules/brotli/enc/static_init_enc.c",
+      "sha256": "c62f0f3c81ea6bd198e5dff2f804e78a94ac10bf78cf5c1dbb72b28ab5a0cddd"
+    },
+    {
+      "path": "brotli/enc/static_init_lazy.cc",
+      "source": "firefox:modules/brotli/enc/static_init_lazy.cc",
+      "sha256": "4da8a10a27a032d9f347d989e8c271d5ac949091741543880ec7b4ced5e80696"
+    },
+    {
+      "path": "brotli/enc/utf8_util.c",
+      "source": "firefox:modules/brotli/enc/utf8_util.c",
+      "sha256": "15c394fe3284863e026511f8ba62dfe75148f286f59e2a8fd2f744bc00c8cda9"
+    },
+    {
+      "path": "brotli/enc/utf8_util.h",
+      "source": "firefox:modules/brotli/enc/utf8_util.h",
+      "sha256": "915db224b31b09c311f77776dc5c1a83c73101780349c653551493059212f795"
+    },
+    {
+      "path": "brotli/enc/write_bits.h",
+      "source": "firefox:modules/brotli/enc/write_bits.h",
+      "sha256": "b2af9a0a4da30b47981cc63d29eefb27a85c86e257d7e2c120b7f6ac1efdb060"
+    },
+    {
+      "path": "brotli/include/brotli/decode.h",
+      "source": "firefox:modules/brotli/include/brotli/decode.h",
+      "sha256": "e2f5fdc3ae41e6b7e8986538e421ae79c095541bacf32f2bbfccf8e056405444"
+    },
+    {
+      "path": "brotli/include/brotli/encode.h",
+      "source": "firefox:modules/brotli/include/brotli/encode.h",
+      "sha256": "f1842e38da557efac517a35f1b27d288d464a723ef50316d3d20fe03f6046c06"
+    },
+    {
+      "path": "brotli/include/brotli/port.h",
+      "source": "firefox:modules/brotli/include/brotli/port.h",
+      "sha256": "72b484d7a2561f3a9ad35ebd0d4f97f7a2d9863b619782ada5b083a4b6f40df5"
+    },
+    {
+      "path": "brotli/include/brotli/shared_dictionary.h",
+      "source": "firefox:modules/brotli/include/brotli/shared_dictionary.h",
+      "sha256": "86230f0aaf533044d85d92f84b5aec8b7e4e231d4b64b098604083e7866e8097"
+    },
+    {
+      "path": "brotli/include/brotli/types.h",
+      "source": "firefox:modules/brotli/include/brotli/types.h",
+      "sha256": "ebbd136dc411cc8167636d6f54b66ad0c234dc18989265c37a28c242eaae2efd"
+    },
+    {
+      "path": "brotli/LICENSE",
+      "source": "firefox:modules/brotli/LICENSE",
+      "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+    },
+    {
+      "path": "brotli/moz.build",
+      "source": "firefox:modules/brotli/moz.build",
+      "sha256": "c1fcdd714e5c6063e1e58f86d95670e31293b4e9936cd09f2f2a6f94920fd0c2"
+    },
+    {
+      "path": "brotli/moz.yaml",
+      "source": "firefox:modules/brotli/moz.yaml",
+      "sha256": "8ac2f7577867fef44f218ff7a2f189c804e4dc86d299b22b9663b8df3d6e8a89"
+    },
+    {
+      "path": "zlib-headers/zlib.h",
+      "source": "firefox:modules/zlib/src/zlib.h",
+      "sha256": "818667d6ab6a37fe7469cb06a7f0cb2c2cb2f2c948a03e5accf1a4a74bf3020a"
+    },
+    {
+      "path": "zlib-headers/zconf.h",
+      "source": "firefox:modules/zlib/src/zconf.h",
+      "sha256": "6369dc6844b40ace79470e3cdefca1bf2fc4f50f294eea6e5f71c562ecf79853"
+    },
+    {
+      "path": "zlib-headers/mozzconf.h",
+      "source": "firefox:modules/zlib/src/mozzconf.h",
+      "sha256": "b1c0c35eaa1d88fe8096969899a41c78f3e346070194004d22d8cc275ec81376"
+    }
+  ]
+}

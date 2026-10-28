@@ -1,0 +1,21 @@
+# ruyijs C ABI over the Firefox-vendored urlpattern 0.6.0 crate (docs/owners/WEB_PLATFORM.md).
+# Dependencies resolve offline from the read-only donor <firefox>/third_party/rust.
+[package]
+name = "ruyijs_urlpattern"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["rlib"]
+
+[dependencies]
+urlpattern = "=0.6.0"
+url = "2.5"
+
+[profile.release]
+opt-level = 2
+panic = "abort"
+debug = false
+codegen-units = 1

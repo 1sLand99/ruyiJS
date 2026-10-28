@@ -3,7 +3,7 @@
 #include "js/CallAndConstruct.h"
 #include "js/PropertyAndElement.h"
 #include "js/Realm.h"
-#include "vm/StandaloneTrace.h"
+#include "runtime/standalone_trace.h"
 
 namespace ruyijs {
 PageHelpers::PageHelpers(JSContext* cx, JS::HandleObject page)
@@ -12,7 +12,7 @@ bool PageHelpers::Ensure() {
   if (helpers_) return true;
   JS::RootedObject holder(cx_, JS_NewPlainObject(cx_));
   JS::RootedValue helpers(cx_);
-  if (!holder || !js::standalone_trace::DefineRuyijsObject(cx_, holder) ||
+  if (!holder || !DefineHostHelpers(cx_, holder) ||
       !JS_GetProperty(cx_, holder, "ruyijs", &helpers)) return false;
   helpers_ = &helpers.toObject();
   return true;
@@ -23,6 +23,6 @@ bool PageHelpers::Call(const char* method, const JS::HandleValueArray& args,
   return Ensure() && JS_CallFunctionName(cx_, helpers_, method, args, result);
 }
 bool PageHelpers::Enabled() const {
-  return js::standalone_trace::IsEnabled(js::standalone_trace::Category::Ruyijs);
+  return trace::Enabled();
 }
 }
