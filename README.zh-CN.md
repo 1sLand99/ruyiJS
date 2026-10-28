@@ -194,12 +194,11 @@ with Context(timeout=10) as context:
 | **腾讯天御 Tencent Captcha** | 无感 + 滑块 | `tianyu` |
 | **数美 Shumei** | 滑块 | `shumei` |
 | **网易易盾 NetEase Yidun** | 智能验证 | `yidun` |
-| **Arkose Labs + iovation** | 企业风控 / 设备指纹 | `expedia-taap` |
 | **Akamai Bot Manager 3.x** | sensor_data + sbsd 挑战 | `akamai` |
 | **阿里 234 / fireyejs** | JSVMP 字节码 VM / bx-ua token | `ali234` |
 | **CreepJS** | 指纹审计 —— 全部项目通过 | `creepjs` |
 
-完整的生产级数据采集流程：**BOSS 直聘**、**今日头条**、**抖音**、**小红书**、**Google**、**Expedia TAAP**。
+完整的生产级数据采集流程：**BOSS 直聘**、**今日头条**、**抖音**、**小红书**、**Google**。
 
 > 🔒 **严禁用于任何非法用途，仅用于研究新时代 AI 浏览器。** 线上结果取决于当前网络状况与各站点的实时响应。
 

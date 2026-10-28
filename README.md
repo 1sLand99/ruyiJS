@@ -194,12 +194,11 @@ Each example drives the site's own JavaScript to produce the parameters it deman
 | **腾讯天御 Tencent Captcha** | No-feel + slider | `tianyu` |
 | **数美 Shumei** | Slider | `shumei` |
 | **网易易盾 NetEase Yidun** | Smart check | `yidun` |
-| **Arkose Labs + iovation** | Enterprise risk / device | `expedia-taap` |
 | **Akamai Bot Manager 3.x** | sensor_data + sbsd challenge | `akamai` |
 | **阿里 234 / fireyejs** | JSVMP bytecode VM / bx-ua token | `ali234` |
 | **CreepJS** | Fingerprint audit — passes every section | `creepjs` |
 
-Full production data-collection flows: **BOSS 直聘**, **今日头条 Toutiao**, **抖音 Douyin**, **小红书 RedNote**, **Google**, **Expedia TAAP**.
+Full production data-collection flows: **BOSS 直聘**, **今日头条 Toutiao**, **抖音 Douyin**, **小红书 RedNote**, **Google**.
 
 > 🔒 **Strictly prohibited for any unlawful use.** ruyiJS is provided **solely for research into a new generation of AI browsers.** Live results depend on current network conditions and each site's present responses.
 

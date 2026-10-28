@@ -15,7 +15,6 @@ python ".\examples\极验\geetest_fullpage.py"
 python ".\examples\网易易盾\yidun.py"
 python ".\examples\数美\shumei.py"
 python ".\examples\腾讯天御\tianyu.py"
-python .\examples\expedia-taap\expedia.py
 python .\examples\creepjs\creepjs.py
 python .\examples\turnstile\turnstile.py --direct --timeout 120
 ```

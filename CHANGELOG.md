@@ -5,6 +5,19 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.8] - 2026-10-28
+
+### Removed
+
+- The `expedia-taap` example. It shipped a real account as its default login;
+  the credentials are no longer in the source tree or the package.
+
+### Changed
+
+- Wheels are built from tracked files only, so local untracked example
+  directories are no longer packaged. The bundled runtime is unchanged from
+  0.1.7.
+
 ## [0.1.7] - 2026-10-28
 
 ### Fixed
