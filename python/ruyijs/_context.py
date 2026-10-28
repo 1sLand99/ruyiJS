@@ -24,6 +24,42 @@ from ._runtime_paths import get_runtime_path
 from ._values import JSError, decode, encode
 
 
+def _running_under_wine():
+    try:
+        import ctypes
+        return hasattr(ctypes.WinDLL("ntdll"), "wine_get_version")
+    except (OSError, AttributeError):
+        return False
+
+
+# js.exe is compiled against the MSVC STL whose msvcp140.dll ships beside it.
+# Wine loads its own builtin msvcp140 instead, whose condition_variable waits
+# do not match that STL: background transport completions then never wake the
+# owning thread, so every load that waits on one (external scripts,
+# stylesheets, preloads) hangs until the RPC timeout (issue #1). Wine takes
+# the load order from its per-program registry overrides (WINEDLLOVERRIDES in
+# a Windows child environment is ignored), so prefer the bundled DLL there.
+# A value the user already set for that DLL is kept.
+_BUNDLED_CRT = ("msvcp140",)
+
+
+def _prefer_bundled_crt(shell):
+    if not _running_under_wine():
+        return
+    try:
+        import winreg
+        path = rf"Software\Wine\AppDefaults\{shell.name}\DllOverrides"
+        with winreg.CreateKeyEx(winreg.HKEY_CURRENT_USER, path, 0,
+                                winreg.KEY_QUERY_VALUE | winreg.KEY_SET_VALUE) as key:
+            for name in _BUNDLED_CRT:
+                try:
+                    winreg.QueryValueEx(key, name)
+                except FileNotFoundError:
+                    winreg.SetValueEx(key, name, 0, winreg.REG_SZ, "native,builtin")
+    except OSError:
+        pass
+
+
 class Context(EnvironmentControl, SchedulingControl, RandomControl, ResourceControl, ConsoleControl,
               InspectorControl, InputControl, EvaluationControl):
     """Evaluate JavaScript from Python 3.10+ with bounded transport waits.
@@ -60,6 +96,7 @@ class Context(EnvironmentControl, SchedulingControl, RandomControl, ResourceCont
                       get_runtime_path() / "dist" / "js.exe")
         if not self.shell.is_file():
             raise FileNotFoundError(f"ruyijs shell does not exist: {self.shell}")
+        _prefer_bundled_crt(self.shell)
         try:
             self._pipe = Pipe()
             self._stderr = tempfile.TemporaryFile()
