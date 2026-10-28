@@ -35,8 +35,9 @@ if (ROOT / "dist" / "js.exe").is_file() or os.environ.get("RUYIJS_SHELL"):
 from ruyijs import Context, JSError
 
 URL = "https://www.expediataap.com.hk/taap/signin"
-DEFAULT_EMAIL = "2885542112@qq.com"
-DEFAULT_PASSWORD = "qiyouji2016"
+# Credentials come from arguments or the environment, never from source.
+DEFAULT_EMAIL = os.environ.get("EXPEDIA_EMAIL", "")
+DEFAULT_PASSWORD = os.environ.get("EXPEDIA_PASSWORD", "")
 HOST = "www.expediataap.com.hk"
 PRE_AUTH = "/taap/identity/api/v1/pre-auth"
 SIGN_IN = "/taap/identity/api/v1/sign-in"
@@ -166,8 +167,8 @@ def main():
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--email", default=DEFAULT_EMAIL, help="登入邮箱，默认 trace 中的示例账号")
-    parser.add_argument("--password", default=DEFAULT_PASSWORD, help="登入密码")
+    parser.add_argument("--email", default=DEFAULT_EMAIL, help="登入邮箱（或环境变量 EXPEDIA_EMAIL）")
+    parser.add_argument("--password", default=DEFAULT_PASSWORD, help="登入密码（或环境变量 EXPEDIA_PASSWORD）")
     parser.add_argument("--timeout", type=float, default=240, help="总期限，秒")
     parser.add_argument("--output", type=Path, help="将 JSON 结果同时写入此文件")
     proxy = parser.add_mutually_exclusive_group()
